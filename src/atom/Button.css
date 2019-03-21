@@ -1,0 +1,38 @@
+:root {
+    --white: #ffffff;
+    --grey: #999999;
+
+    --uno:#382255;
+    --due: #5E437D;
+    --tre: #9773B5;
+    --quattro: #C39BE1;
+}
+
+.background-two {
+    background-image: linear-gradient(to right, var(--tre) , var(--quattro));
+    }
+
+.button {
+    width: 200px;
+    height: 50px;
+    border-radius: 40px;
+    margin: 20px;
+    border: 0px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+
+}
+
+
+    @media(min-width: 900px) {
+
+        .button{
+            border: 0px;
+            height: 60px;
+            width: 210px;
+         }
+    }
