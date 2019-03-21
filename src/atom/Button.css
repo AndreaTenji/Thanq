@@ -1,4 +1,16 @@
+:root {
+    --white: #ffffff;
+    --grey: #999999;
 
+    --uno:#382255;
+    --due: #5E437D;
+    --tre: #9773B5;
+    --quattro: #C39BE1;
+}
+
+.background-two {
+    background-image: linear-gradient(to right, var(--tre) , var(--quattro));
+    }
 
 .button {
     width: 200px;
