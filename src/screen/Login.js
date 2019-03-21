@@ -1,6 +1,7 @@
 import React from 'react';
-import Button from './../atom/Button';
-import Form from './../atom/Form';
+import Button from './../Atom/Button';
+import Form from './../Componenti/Forms';
+import Checkbox from './../Atom/Checkbox';
 
 export default class Login extends React.Component {
     render() {
