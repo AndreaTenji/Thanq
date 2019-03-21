@@ -1,5 +1,5 @@
 import React from 'react'
-import './checkbox.css'
+
 
 export default class Login extends React.Component {
 
