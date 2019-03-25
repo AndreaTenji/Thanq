@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from './../Atom/Button';
-import Form from './../Componenti/Forms';
+import Form from './../Componenti/Form';
 import Checkbox from './../Atom/Checkbox';
 
 import './Login.css'
@@ -10,7 +10,9 @@ export default class Login extends React.Component {
         return (
             <div className='login-background'>
                 <div className='centered'>
-                    <Form />
+                    <Form typeInput= 'email' placeholder = 'Email' />
+                    <Form typeInput= 'password' placeholder = 'Password' />
+                    
                     <Checkbox />
                     <Button titoloBottone='Login'/>
                 </div>
