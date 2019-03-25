@@ -12,7 +12,6 @@ export default class Login extends React.Component {
                 <div className='centered'>
                     <Form typeInput= 'email' placeholder = 'Email' />
                     <Form typeInput= 'password' placeholder = 'Password' />
-                    
                     <Checkbox />
                     <Button titoloBottone='Login'/>
                 </div>

@@ -1,0 +1,9 @@
+.singleChatDisplay{
+    background-color: white;
+    width: 375px;
+    height: 90px;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

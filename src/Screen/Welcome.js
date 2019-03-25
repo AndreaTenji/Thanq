@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from './../Atom/Button';
-import Carousel from '../utils/Carousel';
 import background0 from './images/background0.jpg'
 import background1 from './images/background1.jpg'
 import background2 from './images/background2.jpg'
@@ -15,7 +14,7 @@ export default class Welcome extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            background: background0,
+            background: backgrounds[0],
             quote: quotes[0],
         }
     }

@@ -1,0 +1,19 @@
+.menuTabDisplay{
+    width: 375px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: white;
+    box-shadow: 0px 5px 8px 0px rgba(200, 200, 200, 0.6);
+    position: relative;
+}
+
+.oneTab{
+    display: flex;
+    justify-content: center;
+    background: white;
+
+    color:rgb(174, 133, 207);
+    font-weight: 500;
+    
+}
