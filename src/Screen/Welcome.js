@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from './../Atom/Button';
-import Quotes from './../Atom/Quotes'
+import Quotes from './../Atom/Quotes';
 
 import './Welcome.css'
 

@@ -1,0 +1,22 @@
+.imageProfileDisplay{
+    width: 60px;
+    height: 60px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageProfile{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    position: relative;
+    z-index: 0;
+}
+
+.iconFavorite{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    z-index: 2;
+}
