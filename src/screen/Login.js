@@ -8,10 +8,12 @@ import './Login.css'
 export default class Login extends React.Component {
     render() {
         return (
-            <div className='login-background'>
-                <Form />
-                <Checkbox />
-                <Button />
+            <div className='login-background '>
+                <div className='centered'>
+                    <Form />
+                    <Checkbox />
+                    <Button />
+                </div>
             </div>
         )
     }
