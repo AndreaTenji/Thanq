@@ -3,7 +3,8 @@
     background-color: blueviolet;
     width: 375px;
     height: 90px;
-    padding: 10px;
+    margin-bottom: 2px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
