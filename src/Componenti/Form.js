@@ -10,7 +10,7 @@ export default class Form extends React.Component {
         return (
             <input type={typeInput} name="name" placeholder={placeholder}></input>
 
-
+            
         )
     }
 }
