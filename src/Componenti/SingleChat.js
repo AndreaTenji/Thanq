@@ -1,5 +1,5 @@
 import React from 'react'
-import Messaggio from './../Atom/Messaggio.js'
+import Message from './../Atom/Message.js'
 import ProfileImage from './../Atom/ProfileImage'
 import UnreadAndDate from './../Atom/UnreadAndDate'
 import './SingleChat.css'
@@ -23,9 +23,18 @@ export default class SingleChat extends React.Component {
     render() {
         return (
             <div className='singleChatDisplay'>
-                <ProfileImage favoriteBool={this.state.Favorite} imageProfileURL={this.state.ImgProfileURL} />
-                <Messaggio Nome={this.state.Name} Message={this.state.LastMessage} />
-                <UnreadAndDate numMessages={this.state.NumbersMessage} time={this.state.LastMessageTime} />
+                <ProfileImage
+                    favoriteBool={this.state.Favorite}
+                    imageProfileURL={this.state.ImgProfileURL}
+                />
+                <Message
+                    fullName={this.state.Name + ' ' + this.state.Surname}
+                    message={this.state.LastMessage}
+                />
+                <UnreadAndDate
+                    numMessages={this.state.NumbersMessage}
+                    time={this.state.LastMessageTime}
+                />
             </div>
         )
     }
