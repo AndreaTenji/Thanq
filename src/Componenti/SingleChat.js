@@ -21,7 +21,7 @@ export default class SingleChat extends React.Component {
         return (
             <div className='singleChatDisplay'>
                 <ProfileImage favoriteBool={this.state.Favorite} imageProfileURL={this.state.ImgProfileURL} />
-                <Messaggio UtenteNick="Nome" UtenteMessage="Messagio" />
+                <Messaggio Nome={this.state.Name} Message={this.state.LastMessage} />
             </div>
         )
     }

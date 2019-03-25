@@ -12,8 +12,8 @@
     {
         return(
             <div className="SingleChat">
-            <h1>{this.props.UtenteNick}</h1>
-            <h3>{this.props.UtenteMessage}</h3>
+            <h1>{this.props.Nome}</h1>
+            <h3>{this.props.Message}</h3>
             </div>
         )
     }
