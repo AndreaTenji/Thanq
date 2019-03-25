@@ -1,11 +1,11 @@
 import React from 'react'
-
+import './SingleChat.css'
 export default class SingleChat extends React.Component {
 
     render() {
         return (
-            <div>
-                <div> Profilo </div>
+            <div className='singleChatDisplay'>
+                <div> Foto profilo </div>
                 <div> Stella dei preferiti </div>
                 <div> Nome Persona </div>
                 <div> Ultimo messaggio </div>
