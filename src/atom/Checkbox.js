@@ -1,9 +1,7 @@
 import React from 'react'
-
+import './Checkbox.css'
 
 export default class Login extends React.Component {
-
-
     render() {
         return (
             <div>
@@ -12,6 +10,4 @@ export default class Login extends React.Component {
             </div>
         )
     }
-
-
 }
