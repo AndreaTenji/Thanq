@@ -19,12 +19,10 @@ export default class SingleChat extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='singleChatDisplay'>
+                <ProfileImage favoriteBool={this.state.Favorite} imageProfileURL={this.state.ImgProfileURL} />
                 <Messaggio UtenteNick="Nome" UtenteMessage="Messagio" />
-                <div className='singleChatDisplay'>
-                    <ProfileImage favoriteBool={this.state.Favorite} imageProfileURL={this.state.ImgProfileURL} />
-
-                </div>
-                )
-            }
+            </div>
+        )
+    }
 } 
