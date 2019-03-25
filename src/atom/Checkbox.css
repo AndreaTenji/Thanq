@@ -25,7 +25,7 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
     background-position: 0 -24px;
 }
 label.css-label {
-background-image:url(../icons/icon_checkbox.png);
+/* background-image:url(../icons/icon_checkbox.png); */
 -webkit-touch-callout: none;
 -webkit-user-select: none;
 -khtml-user-select: none;

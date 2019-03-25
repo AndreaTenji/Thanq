@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export default class Module extends React.Component {
+export default class PopUp extends React.Component {
     render() {
 
         const style = {
