@@ -11,7 +11,7 @@ export default class Login extends React.Component {
             <div className='login-background'>
                 <Form />
                 <Checkbox />
-                <Button />
+                <Button titoloBottone='Login' />
             </div>
         )
     }
