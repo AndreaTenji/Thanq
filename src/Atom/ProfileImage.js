@@ -1,12 +1,11 @@
 import React from 'react'
 import './ProfileImage.css'
-import ImageProfile from './images/image-profile.png'
 import IconFavorite from './images/icon_favorite_yellow.svg'
 
 export default class ProfileImage extends React.Component {
     render() {
 
-        const { preferito } = this.props
+        const { favoriteBool, imageProfileURL } = this.props
 
         return (
 
@@ -14,13 +13,13 @@ export default class ProfileImage extends React.Component {
 
                 <img
                     className="imageProfile"
-                    src={ImageProfile}
+                    src={require(`./images/${imageProfileURL}.png`)}
                     alt="profile" />
 
-                {preferito && <img
+                {favoriteBool && <img
                     className="iconFavorite"
                     src={IconFavorite}
-                    alt="profile" />}
+                    alt="favorite:ON" />}
             </div>
         )
     }
