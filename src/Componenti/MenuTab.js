@@ -46,7 +46,7 @@ export default class MenuTab extends React.Component {
                 <div onClick={() => this.mostraMessages()} className='oneTab'>
 
                     {(this.state.screenMessages) ? <p> Messages </p> : <img
-                        width='35px'
+                        width='40px'
                         src={IconMessage}
                         alt="Icon Message"
                     />}
@@ -56,7 +56,7 @@ export default class MenuTab extends React.Component {
                 <div onClick={() => this.mostraFavorites()} className='oneTab'>
 
                     {(this.state.screenFavorites) ? <p> Favorite </p> : <img
-                        width='35px'
+                        width='40px'
                         src={IconFavorite}
                         alt="Icon Favorite"
                     />}
@@ -66,7 +66,7 @@ export default class MenuTab extends React.Component {
                 <div onClick={() => this.mostraProfile()} className='oneTab'>
 
                     {(this.state.screenProfile) ? <p> Profile </p> : <img
-                        width='35px'
+                        width='40px'
                         src={IconProfile}
                         alt="Icon Profile"
                     />}

@@ -11,7 +11,10 @@ class App extends Component {
     return (
       <div>
         <Header />
+        <MenuTab />
         <SingleChat />
+
+
       </div>
     );
   }
