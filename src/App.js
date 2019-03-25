@@ -5,15 +5,14 @@ import './App.css';
 import SingleChat from './Componenti/SingleChat.js';
 import MenuTab from './Componenti/MenuTab';
 import Header from './Componenti/Header.js';
+import Sfondo from './Componenti/Sfondo';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Header />
-        <MenuTab />
-        <SingleChat />
-
+     
+        <Sfondo title='titolo' />
 
       </div>
     );
