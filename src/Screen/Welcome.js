@@ -1,8 +1,8 @@
 import React from 'react';
 import Button from './../Atom/Button';
-import background0 from './images/background0.jpg'
-import background1 from './images/background1.jpg'
-import background2 from './images/background2.jpg'
+import background0 from './images/background0.png'
+import background1 from './images/background1.png'
+import background2 from './images/background2.png'
 
 import './Welcome.css'
 
@@ -44,9 +44,7 @@ export default class Welcome extends React.Component {
         return (
             <div className="welcome" style={welcome}>
                 <h2> ThanQ</h2>
-                <div className='centered'>
-                    <Button titoloBottone='Welcome' />
-                </div>
+                <Button titoloBottone='Welcome' />
                 <div className='quote'>
                     <h4>{this.state.quote}</h4>
                     <p>{this.state.nameQuotes}</p>
