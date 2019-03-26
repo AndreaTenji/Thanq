@@ -9,7 +9,7 @@
 }
 
 .background-two {
-    background-image: linear-gradient(to right, var(--tre) , var(--quattro));
+    background: linear-gradient(45deg,#5E437D,#9773B5)
     }
 
 .button {
