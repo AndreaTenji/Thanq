@@ -20,7 +20,7 @@ export default class App extends Component {
     this.authLogin = this.authLogin.bind(this)
     this.state = {
       currentView: 'Welcome',
-      login: false,
+      login: true,
     }
   }
   authLogin() {
@@ -28,6 +28,7 @@ export default class App extends Component {
       login: true,
     })
   }
+
   viewLogin() {
     this.setState({
       currentView: 'Login'
@@ -75,10 +76,13 @@ export default class App extends Component {
           actionProfile={this.viewProfile}
           currentView={this.state.currentView}
         />
-        {this.state.currentView === 'Messages' && <Messages />}
-        {this.state.currentView === 'Favorite' && <Favorite />}
-        {this.state.currentView === 'Profile' && <Profile />}
-      </div>
+        <div style={{ backgroundColor: '#D3ABF0' }}>
+          {this.state.currentView === 'Messages' && <Messages />}
+          {this.state.currentView === 'Favorite' && <Favorite />}
+          {this.state.currentView === 'Profile' && <Profile />}
+        </div>
+
+      </div >
     );
   }
 }

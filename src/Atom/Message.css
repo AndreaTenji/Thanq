@@ -1,5 +1,5 @@
 .message{
-    font-family: 'Gill Sans SemiBold';
+    font-family: 'Gill Sans';
     height: 70px;
     display: flex;
     flex-direction: column;
@@ -8,7 +8,7 @@
     padding-right: 50px;
 }
 .message h2 {
-    color: #5E437D;
+    color: #9773B5;
     font-size: 16pt;
     margin: 5px 0px 0px 0px;
     font-weight: 600;
@@ -17,6 +17,6 @@
 .message h3 {
     color: #999999;
     font-size: 12pt;
-    font-weight: 400;
-    margin: 0px 0px 0px 15px;
+    font-weight: 600;
+    margin: 10px 0px 0px 15px;
 }

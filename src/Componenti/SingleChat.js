@@ -21,16 +21,24 @@ export default class SingleChat extends React.Component {
     }
 
     render() {
+        const { favoriteBool } = this.props
         return (
-            <div className='singleChatDisplay'>
+            <div className='singleChatDisplay' onClick={() => this.props.actionSingleChat()}>
                 <ProfileImage
                     favoriteBool={this.state.Favorite}
                     imageProfileURL={this.state.ImgProfileURL}
                 />
-                <Message
-                    fullName={this.state.Name + ' ' + this.state.Surname}
-                    message={this.state.LastMessage}
-                />
+
+                {favoriteBool ?
+                    <Message
+                        fullName={this.state.Name + ' ' + this.state.Surname}
+                        jobRole={this.state.Job}
+                    />
+                    : <Message
+                        fullName={this.state.Name + ' ' + this.state.Surname}
+                        message={this.state.LastMessage}
+                    />}
+
                 <UnreadAndDate
                     numMessages={this.state.NumbersMessage}
                     time={this.state.LastMessageTime}

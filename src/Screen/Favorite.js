@@ -6,14 +6,14 @@ export default class Favorite extends React.Component {
     render() {
         return (
             <div>
-                <SingleChat />
-                <SingleChat />
-                <SingleChat />
-                <SingleChat />
-                <SingleChat />
-                <SingleChat />
-                <SingleChat />
-                <SingleChat />
+                <SingleChat favoriteBool={true} />
+                <SingleChat favoriteBool={true} />
+                <SingleChat favoriteBool={true} />
+                <SingleChat favoriteBool={true} />
+                <SingleChat favoriteBool={true} />
+                <SingleChat favoriteBool={true} />
+                <SingleChat favoriteBool={true} />
+                <SingleChat favoriteBool={true} />
             </div>
 
         )
