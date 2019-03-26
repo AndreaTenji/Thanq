@@ -7,7 +7,8 @@ import background2 from './images/background2.jpg'
 import './Welcome.css'
 
 const backgrounds = [background0, background1, background2]
-const quotes = ['Remember, teamwork begins by building trust. And the only way to do that is to overcome our need for invulnerability -Patrick Pancioni','"Talent wins games, but teamwork and intelligence win championships" -Michael Jordan','Coming together is a beginning. Keeping together is progress. Working together is success" -Henry Ford']
+const quotes = [`"Remember, teamwork begins by building trust. And the only way to do that is to overcome our need for invulnerability"`, '"Talent wins games, but teamwork and intelligence win championships"', '"Coming together is a beginning. Keeping together is progress. Working together is success"']
+const nameQuotes = [`- Patrick Pancioni`, '- Michael Jordan', '- Henry Ford']
 var i = 0;
 
 export default class Welcome extends React.Component {
@@ -16,35 +17,41 @@ export default class Welcome extends React.Component {
         this.state = {
             background: backgrounds[0],
             quote: quotes[0],
+            nameQuotes: nameQuotes[0],
         }
     }
 
     changeBackground = () => {
-        if (i === backgrounds.length-1) {
-            i = 0
-        }
-        else {
-            i++;
-        }
-        this.setState({ background: backgrounds[i], quote: quotes[i]});
-      }
+        (i === backgrounds.length - 1) ? (i = 0) : (i++)
+
+        this.setState({
+            background: backgrounds[i],
+            quote: quotes[i],
+            nameQuotes: nameQuotes[i]
+        });
+    }
     componentDidMount() {
-        setInterval(this.changeBackground,3000)
+        setInterval(this.changeBackground, 8000)
     }
 
     componentWillUnmount() {
         clearInterval()
     }
+
     render() {
-        let welcome = {
-            backgroundImage: 'url('+ this.state.background +')',
-        }
+        let welcome = { backgroundImage: 'url(' + this.state.background + ')', backgroundSize: 'cover' }
 
         return (
             <div className="welcome" style={welcome}>
                 <h2> ThanQ</h2>
-                <p>{this.state.quote}</p>
-                <Button titoloBottone='Welcome' />
+                <div className='centered'>
+                    <Button titoloBottone='Welcome' />
+                </div>
+                <div className='quote'>
+                    <h4>{this.state.quote}</h4>
+                    <p>{this.state.nameQuotes}</p>
+                </div>
+
             </div>
 
         )

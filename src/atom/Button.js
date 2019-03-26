@@ -6,7 +6,7 @@ export default class Button extends Component {
         const { titoloBottone } = this.props
         return (
             <div>
-                <button className="button background-two" type="submit" value="Props">{titoloBottone}</button>
+                <button className="button background-two" type="submit" value="Props"><h3>{titoloBottone}</h3></button>
             </div>
         );
     }
