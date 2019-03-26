@@ -14,10 +14,9 @@ import ChatInput from './Componenti/ChatInput';
 class App extends Component {
   render() {
     return (
-
       <div>
 
-        <Welcome />
+         <Welcome />
 
         <Header />
         <MenuTab />
