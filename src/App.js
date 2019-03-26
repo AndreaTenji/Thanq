@@ -30,6 +30,12 @@ class App extends Component {
         <Header/>
         <MenuTab />
         <SingleChat />
+        <SingleChat />
+        <SingleChat />
+        <SingleChat />
+        <SingleChat />
+        <SingleChat />
+        <SingleChat />
         <ChatInput />
       </div>
     );

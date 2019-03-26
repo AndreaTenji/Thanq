@@ -1,6 +1,6 @@
 .singleChatDisplay{
     background-color: white;
-    width: 375px;
+    width: 100vw;
     height: 90px;
     margin-bottom: 2px;
     display: flex;
