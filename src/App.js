@@ -9,23 +9,20 @@ import Welcome from './Screen/Welcome.js';
 //import Header from './Componenti/Header.js';
 import SingleChat from './Componenti/SingleChat.js';
 import MenuTab from './Componenti/MenuTab';
-<<<<<<< HEAD
-import Header from './Componenti/Header';
+//import Header from './Componenti/Header';
 import Recovery from './Screen/Recovery';
-=======
-import Header from './Componenti/Header.js';
->>>>>>> bc4171deb5af824a9cdc4745c32aa7125af062fc
+//import Header from './Componenti/Header.js';
 
 class App extends Component {
   render() {
     return (
       <div>
 
-        <Welcome />
+        {/* <Welcome />
 
         <Header />
         <MenuTab />
-        <SingleChat />
+       <SingleChat />*/}
         <Recovery />
 
       </div>
