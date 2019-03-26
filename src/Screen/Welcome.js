@@ -37,6 +37,9 @@ export default class Welcome extends React.Component {
     componentWillUnmount() {
         clearInterval()
     }
+    handleClick() {
+        alert(this.state.message);
+    }
     render() {
         let welcome = { backgroundImage: 'url(' + this.state.background + ')', backgroundSize: 'cover' }
 

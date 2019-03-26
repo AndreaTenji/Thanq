@@ -1,5 +1,8 @@
 import React from 'react';
 import './ChatInput.css'
+import Messaggi from './../img/icon_attachment.svg';
+import Send from './../img/icon_send.svg';
+
 export default class ChatInput extends React.Component{
     state = {
         focus: false,
@@ -16,10 +19,10 @@ export default class ChatInput extends React.Component{
             :
             <h4  onClick={()=>this.Cerca()}>Write a message</h4>
         return(
-            <div class="send-message">
-                <img src={require('./../img/icon_attachment.svg')}/>
+            <div class="send-message">                
+                <img src={Messaggi}/>
                 {CercaEl}
-                <img src={require('./../img/icon_send.svg')}/>
+                <img src={Send}/> 
             </div>
         )
     }

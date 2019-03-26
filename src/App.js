@@ -10,65 +10,65 @@ import ChatInput from './Componenti/ChatInput';
 import Messages from './Screen/Messages'
 import Favorite from './Screen/Favorite'
 import Profile from './Screen/Profile'
-class App extends Component {
-
-  constructor(props) {
-    super(props)
+s App extends Component {
+  
+  tructor(props) {
+super(props)
     this.viewMessage = this.viewMessage.bind(this)
-    this.viewFavorite = this.viewFavorite.bind(this)
-    this.viewProfile = this.viewProfile.bind(this)
-    this.viewLogin = this.viewLogin.bind(this)
-    this.authLogin = this.authLogin.bind(this)
+  this.viewFavorite = this.viewFavorite.bind(this)
+  this.viewProfile = this.viewProfile.bind(this)
+    is.viewLogin = this.viewLogin.bind(this)
+  this.authLogin = this.authLogin.bind(this)
 
-    this.state = {
-      currentView: 'Welcome',
-      login: false,
-    }
+  this.state = {
+    currentView: 'Welcome',
+    login: false,
   }
-  authLogin() {
-    this.setState({
-      login: true,
-    })
-  }
-  viewLogin() {
-    this.setState({
-      currentView: 'Login'
-    })
-  }
-  viewMessage() {
-    this.setState({
-      currentView: 'Messages'
-    })
-  }
+}
+authLogin() {
+  this.setState({
+    login: true,
+  })
+}
+viewLogin() {
+  this.setState({
+    currentView: 'Login'
+  })
+}
+viewMessage() {
+  this.setState({
+    currentView: 'Messages'
+  })
+}
   viewFavorite() {
     this.setState({
-      currentView: 'Favorite'
+    currentView: 'Favorite'
     })
   }
-  viewProfile() {
+ewProfile() {
     this.setState({
       currentView: 'Profile'
     })
   }
 
-
-  render() {
-
-    if (!this.state.login) {
+  
+    er() {
+      
+    if (!this .state.login) {
       return (
-        <div>
+      <div>
           {this.state.currentView === 'Welcome' ?
             <Welcome
-              actionLogin={this.viewLogin}
-            /> :
-            <Login
-              authLogin={this.authLogin}
-            />}
-        </div>
-      )
-    }
-
-    return (
+            actionLogin={this.viewLogin}
+          /> :
+          <Login
+            authLogin={this.authLogin}
+          />}
+        div>
+        
+        
+      
+      return (
       <div>
         <Header />
         <MenuTab
