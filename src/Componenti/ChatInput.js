@@ -1,6 +1,6 @@
 import React from 'react';
-import './Header.css';
-export default class Header extends React.Component{
+import './ChatInput.css'
+export default class ChatInput extends React.Component{
     state = {
         focus: false,
     };
@@ -14,13 +14,13 @@ export default class Header extends React.Component{
         const CercaEl = this.state.focus ? 
         <input type="text" className="ciao" onBlur={()=>this.setState({focus: false})} autoFocus/>
             :
-            <img src={require('./../img/icon_search.svg')} onClick={()=>this.Cerca()} />
+            <h4  onClick={()=>this.Cerca()}>Write a message</h4>
         return(
-            <div className="background-one header">
-                <h2>ThanQ</h2>
+            <div class="send-message">
+                <img src={require('./../img/icon_attachment.svg')}/>
                 {CercaEl}
+                <img src={require('./../img/icon_send.svg')}/>
             </div>
         )
     }
 }
-
