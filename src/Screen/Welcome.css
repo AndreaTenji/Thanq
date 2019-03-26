@@ -1,2 +1,40 @@
 .welcome {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Gill Sans';
+    background-position-x: 50%;
+}
+/* Logo = Thanq */
+.welcome h2{
+    font-size: 40pt;
+}
+
+/* frase Quotes */
+.welcome h4{
+    font-weight: 450;
+    font-size: 18pt;
+    padding: 10px 50px 10px 50px
+}
+
+/* Nome dell autore della Quotes */
+.welcome p{
+    align-self: flex-end;
+    margin-right: 15%;
+    text-align: center;
+    font-weight: 450;
+    margin-top: 1%;
+    font-size: 16pt;
+}
+
+.quote{
+    justify-content: flex-end ; 
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
 }
