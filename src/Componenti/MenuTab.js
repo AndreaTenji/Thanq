@@ -6,46 +6,16 @@ import IconProfile from './images/icon_profile.svg'
 
 export default class MenuTab extends React.Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            screenMessages: true,
-            screenFavorites: false,
-            screenProfile: false,
-        }
-    }
-
-    mostraMessages() {
-        this.setState({
-            screenMessages: true,
-            screenFavorites: false,
-            screenProfile: false,
-        })
-    }
-    mostraFavorites() {
-        this.setState({
-            screenMessages: false,
-            screenFavorites: true,
-            screenProfile: false,
-        })
-    }
-    mostraProfile() {
-        this.setState({
-            screenMessages: false,
-            screenFavorites: false,
-            screenProfile: true,
-        })
-    }
-
-
     render() {
+        const { currentView } = this.props
 
         return (
 
             <div className='menuTabDisplay'>
-                <div onClick={() => this.mostraMessages()} className='oneTab'>
 
-                    {(this.state.screenMessages) ? <p> Messages </p> : <img
+                <div onClick={() => this.props.actionMessage()} className='oneTab'>
+
+                    {(currentView === 'Messages') ? <p> Messages </p> : <img
                         width='40px'
                         src={IconMessage}
                         alt="Icon Message"
@@ -53,9 +23,9 @@ export default class MenuTab extends React.Component {
 
                 </div>
 
-                <div onClick={() => this.mostraFavorites()} className='oneTab'>
+                <div onClick={() => this.props.actionFavorite()} className='oneTab'>
 
-                    {(this.state.screenFavorites) ? <p> Favorite </p> : <img
+                    {(currentView === 'Favorite') ? <p> Favorite </p> : <img
                         width='40px'
                         src={IconFavorite}
                         alt="Icon Favorite"
@@ -63,9 +33,9 @@ export default class MenuTab extends React.Component {
 
                 </div>
 
-                <div onClick={() => this.mostraProfile()} className='oneTab'>
+                <div onClick={() => this.props.actionProfile()} className='oneTab'>
 
-                    {(this.state.screenProfile) ? <p> Profile </p> : <img
+                    {(currentView === 'Profile') ? <p> Profile </p> : <img
                         width='40px'
                         src={IconProfile}
                         alt="Icon Profile"
