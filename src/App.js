@@ -10,16 +10,18 @@ import Login from './Screen/Login.js';
 import SingleChat from './Componenti/SingleChat.js';
 import MenuTab from './Componenti/MenuTab';
 import Header from './Componenti/Header.js';
-
+import ChatInput from './Componenti/ChatInput';
 class App extends Component {
   render() {
     return (
-
       <div>
+
+        <Welcome />
+
         <Header />
         <MenuTab />
         <SingleChat />
-
+        <ChatInput />
       </div>
     );
   }
