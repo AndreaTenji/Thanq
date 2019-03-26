@@ -10,7 +10,6 @@ import Welcome from './Screen/Welcome.js';
 import SingleChat from './Componenti/SingleChat.js';
 import MenuTab from './Componenti/MenuTab';
 import Header from './Componenti/Header.js';
-import Sfondo from './Componenti/Sfondo';
 
 class App extends Component {
   render() {
