@@ -8,11 +8,13 @@ import './Login.css'
 export default class PasswordRecovery extends React.Component {
     render() {
         return (
+
             <div className='login-background'>
                 <div className='centered'>
-                    <Form typeInput= 'email' placeholder = 'Please enter email address' />
-                    <Form typeInput= 'email' placeholder = 'Please confirm email address' />
-                    <Button titoloBottone='Reset Password'/>
+                    <h1>Recovery Password</h1>
+                    <Form typeInput='email' placeholder='Please enter email address' />
+                    <Form typeInput='email' placeholder='Please confirm email address' />
+                    <Button titoloBottone='Reset Password' />
                 </div>
             </div>
 
