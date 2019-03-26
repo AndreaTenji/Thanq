@@ -7,6 +7,10 @@ import Welcome from './Screen/Welcome.js';
 //mport SingleChat from './Componenti/SingleChat.js';
 //import MenuTab from './Componenti/MenuTab';
 //import Header from './Componenti/Header.js';
+import SingleChat from './Componenti/SingleChat.js';
+import MenuTab from './Componenti/MenuTab';
+import Header from './Componenti/Header.js';
+import Sfondo from './Componenti/Sfondo';
 
 class App extends Component {
   render() {
@@ -16,6 +20,9 @@ class App extends Component {
 
         <Welcome />
 
+        <Header />
+        <MenuTab />
+        <SingleChat />
 
       </div>
     );
