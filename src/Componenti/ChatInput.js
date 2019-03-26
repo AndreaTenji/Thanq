@@ -12,7 +12,7 @@ export default class ChatInput extends React.Component{
     }
     render(){
         const CercaEl = this.state.focus ? 
-        <input type="text" className="ciao" onBlur={()=>this.setState({focus: false})} autoFocus/>
+        <input type="text" className="Message" onBlur={()=>this.setState({focus: false})} autoFocus/>
             :
             <h4  onClick={()=>this.Cerca()}>Write a message</h4>
         return(

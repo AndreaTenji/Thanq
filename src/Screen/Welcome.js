@@ -37,14 +37,13 @@ export default class Welcome extends React.Component {
     componentWillUnmount() {
         clearInterval()
     }
-
     render() {
         let welcome = { backgroundImage: 'url(' + this.state.background + ')', backgroundSize: 'cover' }
 
         return (
             <div className="welcome" style={welcome}>
                 <h2> ThanQ</h2>
-                <Button titoloBottone='Welcome' />
+                <Button titoloBottone='Welcome'/>
                 <div className='quote'>
                     <h4>{this.state.quote}</h4>
                     <p>{this.state.nameQuotes}</p>

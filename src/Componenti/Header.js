@@ -7,12 +7,12 @@ export default class Header extends React.Component{
     Cerca()
     {
         this.setState({
-            focus: true
+            focus: !this.state.focus
         })
     }
     render(){
         const CercaEl = this.state.focus ? 
-        <input type="text" className="ciao" onBlur={()=>this.setState({focus: false})} autoFocus/>
+        <input type="text" onBlur={()=>this.Cerca()} autoFocus/>
             :
             <img src={require('./../img/icon_search.svg')} onClick={()=>this.Cerca()} />
         return(
