@@ -9,6 +9,7 @@ import Header from './Componenti/Header.js';
 import Messages from './Screen/Messages'
 import Favorite from './Screen/Favorite'
 import Profile from './Screen/Profile'
+import ChangePassword from './Screen/ChangePassword'
 export default class App extends Component {
 
   constructor(props) {
@@ -16,8 +17,8 @@ export default class App extends Component {
     this.viewScreen = this.viewScreen.bind(this)
     this.authLogin = this.authLogin.bind(this)
     this.state = {
-      currentView: 'Welcome',
-      login: true,
+      currentView: 'ChangePassword',
+      login: false,
     }
   }
 
@@ -48,8 +49,11 @@ export default class App extends Component {
         </div>
       )
     }
-
+    if (this.state.currentView === 'ChangePassword') {
+      return <ChangePassword actionBack={() => this.viewScreen('Profile')} />
+    }
     return (
+
       <div>
         <Header />
         <MenuTab
@@ -61,10 +65,10 @@ export default class App extends Component {
         <div style={{ backgroundColor: '#D3ABF0' }}>
           {this.state.currentView === 'Messages' && <Messages />}
           {this.state.currentView === 'Favorite' && <Favorite />}
-          {this.state.currentView === 'Profile' && <Profile />}
+          {this.state.currentView === 'Profile' && <Profile actionSetting={() => this.viewScreen('ChangePassword')} />}
         </div>
+      </div>
 
-      </div >
     );
   }
 }

@@ -5,11 +5,11 @@ import IconFavorite from './images/icon_favorite_yellow.svg'
 export default class ProfileImage extends React.Component {
     render() {
 
-        const { favoriteBool, imageProfileURL } = this.props
+        const { favoriteBool, imageProfileURL, size } = this.props
 
         return (
 
-            <div className="imageProfileDisplay">
+            <div style={{ width: size, }} className="imageProfileDisplay">
 
                 <img
                     className="imageProfile"
