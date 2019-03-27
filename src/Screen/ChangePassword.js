@@ -1,32 +1,43 @@
 import React from 'react';
-import { TextRegularGrey } from './../Atom/Texts'
+import { TextRegularGrey, TextSettings } from './../Atom/Texts'
 import IconNext from './../Componenti/images/icon_next.svg'
-import { TextSettings, TextSemiBoldGrey } from './../Atom/Texts'
+import Input from './../Atom/Input'
 
 
 
 export default class ChangePassword extends React.Component {
 
     render() {
-        const { Text, } = this.props
 
         return (
 
-            <div>
-                <div onClick={this.props.actionBack} >
+            <div style={{ height: '100vh', backgroundColor: 'white' }}>
+
+                <div style={{ position: 'absolute', padding: '12px', display: 'flex' }
+                } onClick={this.props.actionBack} >
                     <img
+                        style={{ transform: `rotate(180deg)` }}
                         src={IconNext}
-                        alt="Icon next"
+                        alt="Back"
+
                     />
+                    <TextRegularGrey Text={'Back'} />
                 </div>
 
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <TextRegularGrey Text={Text} />
 
-                    <TextSettings Text={'Logout'} />
+                <div style={{ height: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-around' }}>
+                    <TextSettings Text={'Change Password'} />
+
+                    <Input type={'password'} placeholder={'CurrentPassword'} />
+                    <Input type={'password'} placeholder={'New Password'} />
+                    <Input type={'password'} placeholder={'Conferm new Password'} />
                 </div>
 
-            </div>
+                <div onClick={() => alert('PasswordCambiata')} style={{ textAlign: 'center', paddingTop: '30px' }}>
+                    <TextSettings Text={'CONFIRM'} />
+                </div>
+
+            </div >
 
         )
     }

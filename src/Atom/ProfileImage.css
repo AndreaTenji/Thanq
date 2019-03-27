@@ -16,5 +16,5 @@
     width: inherit;
     height: inherit;
     position: absolute;
-    z-index: 2;
+    z-index: 1;
 }

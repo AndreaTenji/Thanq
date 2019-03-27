@@ -1,0 +1,21 @@
+.inputLogin input{
+    font-family: 'Gill Sans';
+    border: none;
+    color:#999999;
+    font-weight: 400;
+    font-size:20pt;
+    height: auto;
+    width: auto;
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+    background-color: transparent;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.inputLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
