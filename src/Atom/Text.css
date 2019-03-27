@@ -1,0 +1,35 @@
+*{
+    font-family: 'Gill Sans' 
+}
+
+:root {
+    --white: #ffffff;
+    --grey: #999999;
+
+    --uno:#382255;
+    --due: #5E437D;
+    --tre: #9773B5;
+    --quattro: #C39BE1;
+
+    --regular: 'Gill Sans Regular';
+    --semibold: 'Gill Sans SemiBold';
+    --bold: 'Gill Sans Bold';
+    
+}
+
+.textSettings{
+    color:var(--due);
+    font-weight: 700;
+    font-size:20pt;
+}
+
+.textRegularGrey{
+    color:var(--grey);
+    font-weight: 400;
+    font-size:20pt;
+}
+.textSemiBoldGrey{
+    color:var(--grey);
+    font-weight: 600;
+    font-size:18pt;
+}

@@ -27,6 +27,7 @@ export default class SingleChat extends React.Component {
                 <ProfileImage
                     favoriteBool={this.state.Favorite}
                     imageProfileURL={this.state.ImgProfileURL}
+                    size='60px'
                 />
 
                 {favoriteBool ?
