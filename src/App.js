@@ -9,6 +9,7 @@ import Header from './Componenti/Header.js';
 import Messages from './Screen/Messages'
 import Favorite from './Screen/Favorite'
 import Profile from './Screen/Profile'
+import Chat from './Screen/Chat'
 import ChangePassword from './Screen/ChangePassword'
 export default class App extends Component {
 
@@ -17,7 +18,7 @@ export default class App extends Component {
     this.viewScreen = this.viewScreen.bind(this)
     this.authLogin = this.authLogin.bind(this)
     this.state = {
-      currentView: 'Messages',
+      currentView: 'Chat',
       login: true,
     }
   }
@@ -49,8 +50,15 @@ export default class App extends Component {
         </div>
       )
     }
+
+    //IMPOSTAZIONI
+
     if (this.state.currentView === 'ChangePassword') {
       return <ChangePassword actionBack={() => this.viewScreen('Profile')} />
+    }
+    //CHAT
+    if (this.state.currentView === 'Chat') {
+      return <Chat actionBack={() => this.viewScreen('Chat')} />
     }
     return (
 

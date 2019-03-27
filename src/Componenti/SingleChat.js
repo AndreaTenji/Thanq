@@ -24,26 +24,32 @@ export default class SingleChat extends React.Component {
         const { favoriteBool } = this.props
         return (
             <div className='singleChatDisplay' onClick={() => this.props.actionSingleChat()}>
-                <ProfileImage
-                    favoriteBool={this.state.Favorite}
-                    imageProfileURL={this.state.ImgProfileURL}
-                    size='60px'
-                />
-
-                {favoriteBool ?
-                    <Message
-                        fullName={this.state.Name + ' ' + this.state.Surname}
-                        jobRole={this.state.Job}
+                <div style={{ display: 'flex', flex: 2, justifyContent: 'center' }}>
+                    <ProfileImage
+                        favoriteBool={this.state.Favorite}
+                        imageProfileURL={this.state.ImgProfileURL}
+                        size='60px'
                     />
-                    : <Message
-                        fullName={this.state.Name + ' ' + this.state.Surname}
-                        message={this.state.LastMessage}
-                    />}
+                </div>
 
-                <UnreadAndDate
-                    numMessages={this.state.NumbersMessage}
-                    time={this.state.LastMessageTime}
-                />
+                <div style={{ flex: 3 }}>
+                    {favoriteBool ?
+                        <Message
+                            fullName={this.state.Name + ' ' + this.state.Surname}
+                            jobRole={this.state.Job}
+                        />
+                        : <Message
+                            fullName={this.state.Name + ' ' + this.state.Surname}
+                            message={this.state.LastMessage}
+                        />}
+                </div>
+                <div style={{ flex: 1 }}>
+                    <UnreadAndDate
+                        numMessages={this.state.NumbersMessage}
+                        time={this.state.LastMessageTime}
+                    />
+                </div>
+
             </div>
         )
     }

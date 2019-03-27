@@ -25,4 +25,20 @@ export class TextSemiBoldGrey extends React.Component {
         )
     }
 }
+export class TextChatName extends React.Component {
+    render() {
+        const { Text } = this.props
+        return (
+            <h1 className='textChatName'>{Text}</h1>
+        )
+    }
+}
+export class TextRegularWhite extends React.Component {
+    render() {
+        const { Text } = this.props
+        return (
+            <h1 className='textRegularWhite'>{Text}</h1>
+        )
+    }
+}
 

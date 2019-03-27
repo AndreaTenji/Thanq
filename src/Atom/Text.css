@@ -17,6 +17,7 @@
     
 }
 
+
 .textSettings{
     color:var(--due);
     font-weight: 700;
@@ -32,4 +33,16 @@
     color:var(--grey);
     font-weight: 600;
     font-size:18pt;
+}
+.textChatName{
+    color:var(--white);
+    font-weight: 600;
+    font-size:20pt;
+    margin: 0px;
+}
+.textRegularWhite{
+    color:var(--white);
+    font-weight: 400;
+    font-size:20pt;
+    margin: 0px;
 }
