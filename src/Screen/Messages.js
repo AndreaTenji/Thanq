@@ -1,6 +1,6 @@
 import React from 'react';
 import SingleChat from './../Componenti/SingleChat'
-import Chat from './Chat'
+import Chat from './../Componenti/Chat'
 
 export default class Messages extends React.Component {
 
