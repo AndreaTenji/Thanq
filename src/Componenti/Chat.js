@@ -6,25 +6,20 @@ export default class Chat extends React.Component{
     state ={
         timedate: new Date(),
         Utenteid: null, //will be 1  props
-        message:['andrea','come stai?','tutto bene?'],
-
+        message:['andrea','come stai?','tutto bene?','ciao'],
     }
     render(){
-       /* for(var i = 0;i>this.state.message.length;i++){
-            <ChatID1 message={this.state.message[i]} data={'11:00'}/>
-        }*/
+    const Messaggi =  this.state.message.map(el=>(<ChatID1 message={el} data={Data(this.state.timedate)}/>))
         return(
         <div className="Lista"> 
             <ChatInput />
-            <ChatID1 message={'pippo'} data={'11:00'}/>
-            <ChatID1 message={'Hola'} data={'11:10'} />
-            <ChatID1 message={'Come'} data={'11:15'}/>
-            <ChatID1 message={'Stai?'} data={'11:17'}/>
-            <ChatID1 message={'Tutto bene?'} data={'11:20'}/>
-        
+            {Messaggi}
         </div>
-       
         )
-    
     }
+}
+function Data(DataOrigine){
+    const ore = DataOrigine.getHours()
+    const minuti = DataOrigine.getMinutes()
+    return ore + ':' + minuti 
 }
