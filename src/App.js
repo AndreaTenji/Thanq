@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-
 import './App.css';
-//import Login from './Screen/Login.js';
 import Login from './Screen/Login';
 import Welcome from './Screen/Welcome';
 import MenuTab from './Componenti/MenuTab';
@@ -46,7 +44,8 @@ export default class App extends Component {
             /> :
             <Login
               authLogin={this.authLogin}
-            />}
+            />
+          }
         </div>
       )
     }
@@ -58,21 +57,19 @@ export default class App extends Component {
     }
     //CHAT
     if (this.state.currentView === 'Chat') {
-      return <Chat actionBack={() => this.viewScreen('Chat')} />
+      return <Chat actionBack={(x) => this.viewScreen(x)} />
     }
     return (
-
       <div>
         <div style={{ position: "fixed", zIndex: 3 }}>
           <Header />
           <MenuTab
+            currentView={this.state.currentView}
             actionMessage={() => this.viewScreen('Messages')}
             actionFavorite={() => this.viewScreen('Favorite')}
             actionProfile={() => this.viewScreen('Profile')}
-            currentView={this.state.currentView}
           />
         </div>
-
 
         <div style={{ backgroundColor: '#D3ABF0', paddingTop: '120px' }}>
           {this.state.currentView === 'Messages' && <Messages />}

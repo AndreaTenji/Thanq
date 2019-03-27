@@ -1,0 +1,50 @@
+.single-message {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Gill Sans";
+    padding-top: 10px;
+}
+
+.single-message h4{
+    margin: 0px;
+}
+
+.bubble-text {
+    padding: 10px 10px 10px 10px;
+    border-radius: 22px;
+    box-shadow: 0px 3px 6px #00000016;
+    overflow: none;
+    max-width: 50%;
+    margin: 1vh;
+}
+    .bubble-text img{
+        width: 100%;
+        border-radius: 4%;
+    }
+
+.time{
+    padding-right: 3%;
+
+    padding-left: 3%;
+    color: var(--grey);
+    order: 2;
+}
+
+.sent{
+    order: 3;
+    text-align: right;
+    background-color: var(--white);
+    color:var(--grey); 
+    align-self: flex-end;   
+}
+.received{
+    
+    order:1;
+    text-align: left;
+    background-image: linear-gradient(to right, var(--tre) , var(--quattro));
+    color: var(--white);
+    align-self: flex-start;   
+}
