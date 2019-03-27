@@ -22,7 +22,7 @@ export default class Header extends React.Component {
                     <div className='searchDisplay'>
                         <h2>thanQ</h2>
 
-                        <img src={require('./../img/icon_search.svg')} alt='cerca' onClick={() => this.Cerca()} />
+                        <img src={require('./../Componenti/images/icon_search.svg')} alt='cerca' onClick={() => this.Cerca()} />
 
                     </div>}
             </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './ChatInput.css'
-import Messaggi from './../img/icon_attachment.svg';
-import Send from './../img/icon_send.svg';
+import Messaggi from './../Componenti/images/icon_attachment.svg';
+import Send from './../Componenti/images/icon_send.svg';
 
 export default class ChatInput extends React.Component{
     state = {
