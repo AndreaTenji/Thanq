@@ -3,7 +3,7 @@ import './Chat.css';
 
 export default class ChatID1 extends React.Component{
     state ={
-        Verifica:false,
+        Verifica:true,
     }
     constructor(props){
         super(props)    
@@ -16,14 +16,14 @@ export default class ChatID1 extends React.Component{
                 <h4 class="Cloud-Text2">{this.props.message}</h4>
             </div>
         </div> 
-            <span class="time-right" >11:00</span>
+            <span class="time-right" >{this.props.data}</span>
     </div>
         :
         <div class="Chat-Messaggio3">  
-                <span class="time-left" >11:00</span> 
+                <span class="time-left" >{this.props.data}</span> 
                 <div class="speech-bubble3">  
                     <div class="Cloud-Messaggio3">  
-                    <h4 class="Cloud-Text3">CIao</h4>
+                    <h4 class="Cloud-Text3">{this.props.message}</h4>
                     </div>
                 </div>
             </div>
