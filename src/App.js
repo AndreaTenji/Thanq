@@ -58,6 +58,7 @@ export default class App extends Component {
           actionProfile={() => this.viewScreen('Profile')}
           currentView={this.state.currentView}
         />
+
         <div style={{ backgroundColor: '#D3ABF0' }}>
           {this.state.currentView === 'Messages' && <Messages />}
           {this.state.currentView === 'Favorite' && <Favorite />}
