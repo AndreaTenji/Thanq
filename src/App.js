@@ -13,43 +13,25 @@ export default class App extends Component {
 
   constructor(props) {
     super(props)
-    this.viewMessage = this.viewMessage.bind(this)
-    this.viewFavorite = this.viewFavorite.bind(this)
-    this.viewProfile = this.viewProfile.bind(this)
-    this.viewLogin = this.viewLogin.bind(this)
+    this.viewScreen = this.viewScreen.bind(this)
     this.authLogin = this.authLogin.bind(this)
     this.state = {
       currentView: 'Welcome',
       login: true,
     }
   }
+
+  viewScreen(screen) {
+    this.setState({
+      currentView: screen
+    })
+  }
+
   authLogin() {
     this.setState({
       login: true,
     })
   }
-
-  viewLogin() {
-    this.setState({
-      currentView: 'Login'
-    })
-  }
-  viewMessage() {
-    this.setState({
-      currentView: 'Messages'
-    })
-  }
-  viewFavorite() {
-    this.setState({
-      currentView: 'Favorite'
-    })
-  }
-  viewProfile() {
-    this.setState({
-      currentView: 'Profile'
-    })
-  }
-
 
   render() {
 
@@ -58,7 +40,7 @@ export default class App extends Component {
         <div>
           {this.state.currentView === 'Welcome' ?
             <Welcome
-              actionLogin={this.viewLogin}
+              actionLogin={() => this.viewScreen('Login')}
             /> :
             <Login
               authLogin={this.authLogin}
@@ -71,9 +53,9 @@ export default class App extends Component {
       <div>
         <Header />
         <MenuTab
-          actionMessage={this.viewMessage}
-          actionFavorite={this.viewFavorite}
-          actionProfile={this.viewProfile}
+          actionMessage={() => this.viewScreen('Messages')}
+          actionFavorite={() => this.viewScreen('Favorite')}
+          actionProfile={() => this.viewScreen('Profile')}
           currentView={this.state.currentView}
         />
         <div style={{ backgroundColor: '#D3ABF0' }}>
