@@ -3,7 +3,7 @@ import './Chat.css';
 
 export default class ChatID1 extends React.Component{
     state ={
-        Verifica:true,
+        Verifica:false,
     }
     constructor(props){
         super(props)    
