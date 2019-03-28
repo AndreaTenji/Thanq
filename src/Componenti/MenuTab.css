@@ -9,6 +9,7 @@
 }
 
 .oneTab{
+    font-size: 14pt;
     display: flex;
     justify-content: center;
     color:rgb(174, 133, 207);

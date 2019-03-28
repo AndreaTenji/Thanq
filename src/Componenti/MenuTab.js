@@ -3,6 +3,7 @@ import './MenuTab.css'
 import IconFavorite from './images/icon_favorite_purple.svg'
 import IconMessage from './images/icon_messages.svg'
 import IconProfile from './images/icon_profile.svg'
+import ItemTab from './../Atom/ItemTab'
 
 export default class MenuTab extends React.Component {
 
@@ -15,31 +16,25 @@ export default class MenuTab extends React.Component {
 
                 <div onClick={() => this.props.actionTab('Messages')} className='oneTab'>
 
-                    {(currentView === 'Messages') ? <p> Messages </p> : <img
-                        width='40px'
-                        src={IconMessage}
-                        alt="Icon Message"
-                    />}
+                    {(currentView === 'Messages') ?
+                        <ItemTab tabTitle='Messages' active={true} /> :
+                        <ItemTab tabTitle='Messages' active={false} />}
 
                 </div>
 
                 <div onClick={() => this.props.actionTab('Favorite')} className='oneTab'>
 
-                    {(currentView === 'Favorite') ? <p> Favorite </p> : <img
-                        width='40px'
-                        src={IconFavorite}
-                        alt="Icon Favorite"
-                    />}
+                    {(currentView === 'Favorite') ?
+                        <ItemTab tabTitle='Favorite' active={true} /> :
+                        <ItemTab tabTitle='Favorite' active={false} />}
 
                 </div>
 
                 <div onClick={() => this.props.actionTab('Profile')} className='oneTab'>
 
-                    {(currentView === 'Profile') ? <p> Profile </p> : <img
-                        width='40px'
-                        src={IconProfile}
-                        alt="Icon Profile"
-                    />}
+                    {(currentView === 'Profile') ?
+                        <ItemTab tabTitle='Profile' active={true} /> :
+                        <ItemTab tabTitle='Profile' active={false} />}
 
                 </div>
 

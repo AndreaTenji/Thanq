@@ -21,7 +21,7 @@ export default class LandingPage extends React.Component {
                     <Header />
                     <MenuTab
                         currentView={this.state.currentScreen}
-                        actionTab={(x) => this.props.viewScreen(x)}
+                        actionTab={(x) => this.setState({ currentScreen: x })}
                     />
                 </div>
 
