@@ -91,7 +91,7 @@ export default class App extends Component {
       'LandingPage': () => <LandingPage messages={this.state.messages} viewScreen={this.viewScreen} currentView={this.state.currentView} />,
     }
 
-    const Comp = ROUTES[this.state.currentView] || <LandingPage />
+    const Comp = ROUTES[this.state.currentView] || ROUTES['LandingPage']
 
     return (
       <div>
