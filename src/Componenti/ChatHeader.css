@@ -1,0 +1,6 @@
+.chatHeader{
+    height: 70px;
+    background: linear-gradient(30deg,#9773B5,#5E437D);
+    display: flex;
+    align-items: center ;
+}

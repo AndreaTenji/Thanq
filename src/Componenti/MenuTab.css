@@ -1,5 +1,5 @@
 .menuTabDisplay{
-    width: 375px;
+    width: 100vw;
     height: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -11,9 +11,6 @@
 .oneTab{
     display: flex;
     justify-content: center;
-    background: white;
-
     color:rgb(174, 133, 207);
-    font-weight: 500;
-    
+    font-weight: 700;
 }

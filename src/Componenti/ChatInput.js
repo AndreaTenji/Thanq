@@ -1,25 +1,30 @@
 import React from 'react';
 import './ChatInput.css'
-export default class ChatInput extends React.Component{
+import Messaggi from './../Assets/icons/icon_attachment.svg';
+import Send from './../Assets/icons/icon_send.svg';
+
+export default class ChatInput extends React.Component {
     state = {
         focus: false,
     };
-    Cerca()
-    {
+    writeMessage() {
         this.setState({
             focus: true
         })
     }
-    render(){
-        const CercaEl = this.state.focus ? 
-        <input type="text" className="ciao" onBlur={()=>this.setState({focus: false})} autoFocus/>
-            :
-            <h4  onClick={()=>this.Cerca()}>Write a message</h4>
-        return(
-            <div className="send-message">
-                <img src={require('./../img/icon_attachment.svg')}/>
-                {CercaEl}
-                <img src={require('./../img/icon_send.svg')}/>
+    render() {
+        return (
+            <div class="send-message">
+                <img
+                    src={Messaggi}
+                    alt='send'
+                />
+                {this.state.focus ?
+                    <input type="text" onBlur={() => this.setState({ focus: false })} autoFocus />
+                    :
+                    <h4 onClick={() => this.writeMessage()}>Write a message</h4>}
+                <img src={Send}
+                    alt='send' />
             </div>
         )
     }

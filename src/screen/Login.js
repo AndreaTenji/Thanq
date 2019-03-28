@@ -13,7 +13,7 @@ export default class Login extends React.Component {
                     <Form typeInput='email' placeholder='Email' />
                     <Form typeInput='password' placeholder='Password' />
                     <Checkbox />
-                    <Button titoloBottone='Login' />
+                    <Button funzione={() => this.props.authLogin()} titoloBottone='Login' />
                 </div>
             </div>
 
