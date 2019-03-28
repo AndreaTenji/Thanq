@@ -1,6 +1,6 @@
 import React from 'react'
 import './ProfileImage.css'
-import IconFavorite from './images/icon_favorite_yellow.svg'
+import { IconFavoriteYellow } from './../Atom/Icons'
 
 export default class ProfileImage extends React.Component {
     render() {
@@ -13,13 +13,13 @@ export default class ProfileImage extends React.Component {
 
                 <img
                     className="imageProfile"
-                    src={require(`./images/${imageProfileURL}.png`)}
+                    src={require(`./../Assets/images/${imageProfileURL}.png`)}
                     alt="profile" />
 
-                {favoriteBool && <img
-                    className="iconFavorite"
-                    src={IconFavorite}
-                    alt="favorite:ON" />}
+                {favoriteBool &&
+                    <div className="iconFavorite">
+                        <IconFavoriteYellow size={size} />
+                    </div>}
             </div>
         )
     }

@@ -1,8 +1,5 @@
 import React from 'react'
 import './MenuTab.css'
-import IconFavorite from './images/icon_favorite_purple.svg'
-import IconMessage from './images/icon_messages.svg'
-import IconProfile from './images/icon_profile.svg'
 import ItemTab from './../Atom/ItemTab'
 
 export default class MenuTab extends React.Component {
