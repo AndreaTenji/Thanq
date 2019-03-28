@@ -10,13 +10,7 @@ export default class Messages extends React.Component {
         this.state = {
             currentChat: null,
 
-
         }
-    }
-    viewChat(n) {
-        this.setState({
-            currentChat: 'Chat' + n
-        })
     }
 
     render() {
