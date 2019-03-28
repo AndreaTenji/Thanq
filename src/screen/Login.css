@@ -2,7 +2,7 @@
     background-color: blueviolet;
     width: 100vw;
     height: 100vh;
-    background-image: url('images/background0.png');
+    background-image: url('../Assets/images/background0.png');
 }
 
 .centered {

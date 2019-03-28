@@ -1,6 +1,7 @@
 import React from 'react';
-import Form from './../Atom/Form';
 import './Header.css';
+import { IconSearchAdd } from '../Atom/Icons';
+
 export default class Header extends React.Component {
     state = {
         focus: false,
@@ -21,9 +22,9 @@ export default class Header extends React.Component {
                     :
                     <div className='searchDisplay'>
                         <h2>thanQ</h2>
-
-                        <img src={require('./../Componenti/images/icon_search.svg')} alt='cerca' onClick={() => this.Cerca()} />
-
+                        <div onClick={() => this.Cerca()} >
+                            <IconSearchAdd />
+                        </div>
                     </div>}
             </div>
         )

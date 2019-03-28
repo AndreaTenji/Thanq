@@ -1,9 +1,6 @@
 import React from 'react';
 import { TextChatName, TextRegularWhite } from './../Atom/Texts'
-import IconNext from './../Assets/icons/icon_back.svg'
-import IconTrash from './../Assets/icons/icon_trash.svg'
-import IconFavoriteON from './../Assets/icons/icon_favorite_white.svg'
-import IconFavoriteOFF from './../Assets/icons/icon_favorite_outline.svg'
+import { IconTrash, IconFavoriteOutline, IconFavoriteWhite, IconBackWhite } from '../Atom/Icons';
 import ProfileImage from './../Atom/ProfileImage'
 import './ChatHeader.css'
 
@@ -16,7 +13,7 @@ export default class ChatHeader extends React.Component {
                 <div
                     style={{ flex: 1 }}
                     onClick={() => this.props.actionBack('Messages')}>
-                    <img src={IconNext} alt="Back" />
+                    <IconBackWhite />
                 </div>
 
                 <div style={{ flex: 1 }}>
@@ -32,19 +29,13 @@ export default class ChatHeader extends React.Component {
                 </div>
 
                 <div style={{ flex: 1 }}>
-                    <img src={IconTrash} alt="Back" />
+                    <IconTrash />
                 </div>
 
                 <div style={{ flex: 1 }} onClick={this.props.actionFavorite}>
                     {favorite ?
-                        <img
-                            src={IconFavoriteON}
-                            alt="Back"
-                        /> :
-                        <img
-                            src={IconFavoriteOFF}
-                            alt="Back"
-                        />
+                        <IconFavoriteWhite /> :
+                        <IconFavoriteOutline />
                     }
                 </div>
 

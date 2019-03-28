@@ -1,6 +1,6 @@
 import React from 'react';
 import { TextRegularGrey, TextSettings } from './../Atom/Texts'
-import IconNext from './../Componenti/images/icon_next.svg'
+import { IconNext } from './../Atom/Icons'
 import Input from './../Atom/Input'
 
 
@@ -15,12 +15,8 @@ export default class ChangeTextSize extends React.Component {
 
                 <div style={{ position: 'absolute', paddingTop: '3%', display: 'flex' }}
                     onClick={this.props.actionBack} >
-                    <img
-                        style={{ transform: `rotate(180deg)` }}
-                        src={IconNext}
-                        alt="Back"
+                    <IconNext />
 
-                    />
                     {/* <TextRegularGrey Text={'Back'} /> */}
                 </div>
 
