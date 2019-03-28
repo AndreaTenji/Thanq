@@ -6,9 +6,7 @@ export default class Messages extends React.Component {
 
     constructor(props) {
         super(props)
-        this.viewChat = this.viewChat.bind(this)
         this.state = {
-            currentChat: null,
 
         }
     }

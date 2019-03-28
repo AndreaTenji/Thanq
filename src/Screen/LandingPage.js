@@ -27,7 +27,7 @@ export default class LandingPage extends React.Component {
 
                 <div style={{ backgroundColor: '#C39BE1', paddingTop: '120px' }}>
                     {this.state.currentScreen === 'Messages' && <Messages messages={this.props.messages} actionSingleChat={(x) => this.props.viewScreen(x)} />}
-                    {this.state.currentScreen === 'Favorite' && <Favorite actionSingleChat={(x) => this.props.viewScreen(x)} />}
+                    {this.state.currentScreen === 'Favorite' && <Favorite messages={this.props.messages} actionSingleChat={(x) => this.props.viewScreen(x)} />}
                     {this.state.currentScreen === 'Profile' && <Profile actionSetting={(x) => this.props.viewScreen(x)} actionLogout={this.logout} />}
                 </div>
             </div >
