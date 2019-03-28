@@ -1,7 +1,6 @@
 import React from 'react';
 import SingleChat from './../Componenti/SingleChat'
 
-
 export default class Messages extends React.Component {
 
 
@@ -9,7 +8,40 @@ export default class Messages extends React.Component {
         super(props)
         this.viewChat = this.viewChat.bind(this)
         this.state = {
-            currentChat: null
+            currentChat: null,
+            messages: [
+                {
+                    Name: "Nara",
+                    Surname: "Stabo",
+                    Job: "Sales",
+                    LastMessage: "Ahooooo"
+                },
+                {
+                    Name: "Abdula",
+                    Surname: "Iuguraia",
+                    Job: "Sales",
+                    LastMessage: "Ce credi?"
+                },
+                {
+                    Name: "Mozzo",
+                    Surname: "Zozzo",
+                    Job: "Sales",
+                    LastMessage: "No vabbeeeee"
+                },
+                {
+                    Name: "Peter",
+                    Surname: "Petrelli",
+                    Job: "Sales",
+                    LastMessage: "Oh hai visto quella? Je 'scivano le bolle de sapone daa recchie"
+                },
+                {
+                    Name: "Alfonso",
+                    Surname: "Pedretti",
+                    Job: "Sales",
+                    LastMessage: "Veramente me chiamo Arfonzo"
+                },
+            ]
+
         }
     }
     viewChat(n) {
@@ -23,19 +55,14 @@ export default class Messages extends React.Component {
             <div>
 
                 <div>
-                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
-                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
-                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
-                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
-                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
-                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
-                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
-                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
-                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
-                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
-                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
-                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
-
+                    {this.state.messages.map((el, i) =>
+                        <SingleChat
+                            Name={el.Name}
+                            Surname={el.Surname}
+                            Job={el.Job}
+                            LastMessage={el.LastMessage}
+                            favoriteBool={false}
+                            actionSingleChat={() => this.props.actionSingleChat('Chat')} />)}
                 </div>
 
 
