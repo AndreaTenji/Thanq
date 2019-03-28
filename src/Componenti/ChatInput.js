@@ -16,7 +16,7 @@ export default class ChatInput extends React.Component{
             :
             <h4  onClick={()=>this.Cerca()}>Write a message</h4>
         return(
-            <div class="send-message">
+            <div className="send-message">
                 <img src={require('./../img/icon_attachment.svg')}/>
                 {CercaEl}
                 <img src={require('./../img/icon_send.svg')}/>
