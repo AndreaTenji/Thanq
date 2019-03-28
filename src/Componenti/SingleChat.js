@@ -35,12 +35,12 @@ export default class SingleChat extends React.Component {
                 <div style={{ flex: 3 }}>
                     {favoriteBool ?
                         <Message
-                            fullName={this.state.Name + ' ' + this.state.Surname}
-                            jobRole={this.state.Job}
+                            fullName={this.props.Name + ' ' + this.props.Surname}
+                            jobRole={this.props.Job}
                         />
                         : <Message
-                            fullName={this.state.Name + ' ' + this.state.Surname}
-                            message={this.state.LastMessage}
+                            fullName={this.props.Name + ' ' + this.props.Surname}
+                            message={this.props.LastMessage}
                         />}
                 </div>
                 <div style={{ flex: 1 }}>
