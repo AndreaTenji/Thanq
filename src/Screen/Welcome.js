@@ -46,7 +46,7 @@ export default class Welcome extends React.Component {
         return (
             <div className="welcome" style={welcome}>
                 <h2> ThanQ</h2>
-                <Button funzione={() => this.props.actionLogin()} titoloBottone='Welcome' />
+                <Button funzione={() => this.props.actionBotton('Login')} titoloBottone='Welcome' />
                 <div className='quote'>
                     <h4>{this.state.quote}</h4>
                     <p>{this.state.nameQuotes}</p>
