@@ -14,7 +14,6 @@ export default class MenuTab extends React.Component {
             <div className='menuTabDisplay'>
 
                 <div onClick={this.props.actionMessage} className='oneTab'>
-
                     {(currentView === 'Messages') ? <p> Messages </p> : <img
                         width='40px'
                         src={IconMessage}
