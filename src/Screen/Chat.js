@@ -42,18 +42,19 @@ export default class Chat extends React.Component {
                             imageProfileURL={this.state.imageProfile}
                         />
                     </div>
-
-                    <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
-                    <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
-                    <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo, fnoasfnsfafs fsfasfsaffsafaso'} type={false} />
-                    <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
-                    <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
-                    <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
-                    <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
-                    <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
-                    <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
-                    <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
-                    <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
+                    <div style={{ paddingLeft: '10px', paddingRight: '10px', marginBottom: '80px' }}>
+                        <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
+                        <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
+                        <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo, fnoasfnsfafs fsfasfsaffsafaso'} type={false} />
+                        <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
+                        <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
+                        <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
+                        <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
+                        <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
+                        <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
+                        <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
+                        <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
+                    </div>
                 </div>
                 <div style={{ position: 'fixed', top: '85vh' }}>
                     <ChatInput />
