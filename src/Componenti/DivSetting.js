@@ -1,7 +1,7 @@
 import React from 'react';
 import './ChatInput.css'
 import { TextRegularGrey } from './../Atom/Texts'
-import IconNext from './../Componenti/images/icon_next.svg'
+import { IconBack } from '../Atom/Icons';
 
 
 export default class DivSetting extends React.Component {
@@ -12,9 +12,7 @@ export default class DivSetting extends React.Component {
         return (
             <div onClick={Func} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <TextRegularGrey Text={Text} />
-                <img
-                    src={IconNext}
-                    alt="profile" />
+                <IconBack />
 
             </div>
         )

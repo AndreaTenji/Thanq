@@ -2,6 +2,7 @@ import React from 'react'
 import Attachment from './../Assets/icons/icon_attachment.svg'
 import Cancel from './../Assets/icons/icon_cancel.svg'
 import Back from './../Assets/icons/icon_next.svg'
+import BackWhite from './../Assets/icons/icon_back.svg'
 import FavoriteOutline from './../Assets/icons/icon_favorite_outline.svg'
 import FavoritePurple from './../Assets/icons/icon_favorite_purple.svg'
 import FavoriteYellow from './../Assets/icons/icon_favorite_yellow.svg'
@@ -36,6 +37,17 @@ export class IconBack extends React.Component {
             <img
                 style={{ transform: `rotate(180deg)` }}
                 src={Back}
+                alt="Back Icon"
+
+            />
+        )
+    }
+}
+export class IconBackWhite extends React.Component {
+    render() {
+        return (
+            <img
+                src={BackWhite}
                 alt="Back Icon"
 
             />
