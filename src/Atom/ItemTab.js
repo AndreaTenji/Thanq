@@ -7,9 +7,9 @@ export default class ItemTab extends React.Component {
         if (tabTitle === 'Messages') {
             if (active) {
                 return (
-                    <p>
-                        {tabTitle}
-                    </p>
+                    <div>
+                        <p> {tabTitle} </p>
+                    </div>
                 )
 
             } return (
@@ -21,9 +21,9 @@ export default class ItemTab extends React.Component {
         if (tabTitle === 'Favorite') {
             if (active) {
                 return (
-                    <p>
-                        {tabTitle}
-                    </p>
+                    <div>
+                        <p> {tabTitle} </p>
+                    </div>
                 )
 
             } return (
@@ -35,9 +35,9 @@ export default class ItemTab extends React.Component {
         if (tabTitle === 'Profile') {
             if (active) {
                 return (
-                    <p>
-                        {tabTitle}
-                    </p>
+                    <div>
+                        <p> {tabTitle} </p>
+                    </div>
                 )
 
             } return (

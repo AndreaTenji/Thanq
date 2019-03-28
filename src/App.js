@@ -19,6 +19,38 @@ export default class App extends Component {
     this.state = {
       currentView: 'LandingPage',
       login: true,
+      messages: [
+        {
+          Name: "Nara",
+          Surname: "Stabo",
+          Job: "Sales",
+          LastMessage: "Ahooooo"
+        },
+        {
+          Name: "Abdula",
+          Surname: "Iuguraia",
+          Job: "Sales",
+          LastMessage: "Ce credi?"
+        },
+        {
+          Name: "Mozzo",
+          Surname: "Zozzo",
+          Job: "Sales",
+          LastMessage: "No vabbeeeee"
+        },
+        {
+          Name: "Peter",
+          Surname: "Petrelli",
+          Job: "Sales",
+          LastMessage: "Oh hai visto quella? Je 'scivano le bolle de sapone daa recchie"
+        },
+        {
+          Name: "Alfonso",
+          Surname: "Pedretti",
+          Job: "Sales",
+          LastMessage: "Veramente me chiamo Arfonzo"
+        },
+      ]
     }
   }
 
@@ -56,7 +88,7 @@ export default class App extends Component {
       'ChangeProfileImg': () => <ChangeProfileImg actionBack={() => this.viewScreen('Profile')} />,
       'ChangeTextSize': () => <ChangeTextSize actionBack={() => this.viewScreen('Profile')} />,
       'Chat': () => <Chat actionBack={(x) => this.viewScreen(x)} />,
-      'LandingPage': () => <LandingPage viewScreen={this.viewScreen} currentView={this.state.currentView} />,
+      'LandingPage': () => <LandingPage messages={this.state.messages} viewScreen={this.viewScreen} currentView={this.state.currentView} />,
     }
 
     const Comp = ROUTES[this.state.currentView] || <LandingPage />

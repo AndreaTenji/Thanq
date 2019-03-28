@@ -1,14 +1,17 @@
 .menuTabDisplay{
     width: 100vw;
     height: 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
     background: white;
     box-shadow: 0px 5px 8px 0px rgba(200, 200, 200, 0.6);
     position: relative;
 }
 
 .oneTab{
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     font-size: 14pt;
     display: flex;
     justify-content: center;
