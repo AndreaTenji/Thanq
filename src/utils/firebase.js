@@ -1,5 +1,6 @@
 import firebase from 'firebase'
 import 'firebase/auth';
+import app from './../App'
 // Initialize Firebase
 const config = {
     apiKey: "AIzaSyBDT1WCYrEu0BmEa1ZXZ4fVtNXhrbq3ahk",
@@ -9,7 +10,7 @@ const config = {
     storageBucket: "thanq-c41af.appspot.com",
     messagingSenderId: "297767299087"
 };
-class Firebase {
+class Fire {
     constructor() {
         app.initializeApp(config);
     }
