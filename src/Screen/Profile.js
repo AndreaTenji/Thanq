@@ -3,6 +3,7 @@ import ProfileImage from './../Atom/ProfileImage'
 import Separator from './../Atom/Separator'
 import DivSetting from './../Componenti/DivSetting'
 import { TextSettings, TextSemiBoldGrey } from './../Atom/Texts'
+import { IconJob } from './../Atom/Icons'
 export default class Profile extends React.Component {
 
 
@@ -26,9 +27,13 @@ export default class Profile extends React.Component {
                             size='90px'
                         />
                     </div>
-                    <div style={{ paddingLeft: '30px', flex: 5 }}>
+                    <div style={{ paddingLeft: '30px', flex: 6 }}>
                         <TextSettings Text={this.state.Name + ' ' + this.state.Surname} />
-                        <TextSemiBoldGrey Text={this.state.Job} />
+                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                            <IconJob size='40px' />
+                            <TextSemiBoldGrey Text={this.state.Job} />
+                        </div>
+
                     </div>
                 </div>
                 <Separator />
@@ -36,10 +41,10 @@ export default class Profile extends React.Component {
                     <TextSettings Text={'Settings'} />
                     <div style={{ paddingLeft: '20px', paddingTop: '10px', paddingBottom: '10px' }}>
 
-                        <DivSetting Func={this.props.actionSetting} Text={'Change Password'} />
-                        <DivSetting Func={() => alert('Change Profile')} Text={`Change profile's image`} />
-                        <DivSetting Func={() => alert('Change Background')} Text={`Change chat's background`} />
-                        <DivSetting Func={() => alert('Change Text')} Text={`Change text size`} />
+                        <DivSetting Func={() => this.props.actionSetting('ChangePassword')} Text={'Change Password'} />
+                        <DivSetting Func={() => this.props.actionSetting('ChangeProfileImg')} Text={`Change profile's image`} />
+                        <DivSetting Func={() => this.props.actionSetting('ChangeBackground')} Text={`Change chat's background`} />
+                        <DivSetting Func={() => this.props.actionSetting('ChangeTextSize')} Text={`Change text size`} />
 
                     </div>
 
@@ -51,7 +56,9 @@ export default class Profile extends React.Component {
                 </div>
 
 
-                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                <div
+                    onClick={() => this.props.actionLogout()}
+                    style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
 
                     <TextSettings Text={'Logout'} />
                 </div>

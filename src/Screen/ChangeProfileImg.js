@@ -5,7 +5,7 @@ import Input from './../Atom/Input'
 
 
 
-export default class ChangePassword extends React.Component {
+export default class ChangeProfileImg extends React.Component {
 
     render() {
 
@@ -19,14 +19,13 @@ export default class ChangePassword extends React.Component {
                         style={{ transform: `rotate(180deg)` }}
                         src={IconNext}
                         alt="Back"
-
                     />
                     {/* <TextRegularGrey Text={'Back'} /> */}
                 </div>
 
 
                 <div style={{ paddingTop: '3%', height: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <TextSettings Text={'Change Password'} />
+                    <TextSettings Text={'Change Profile Image'} />
 
                     <Input type={'password'} placeholder={'CurrentPassword'} />
                     <Input type={'password'} placeholder={'New Password'} />

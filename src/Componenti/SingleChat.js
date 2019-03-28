@@ -26,7 +26,7 @@ export default class SingleChat extends React.Component {
             <div className='singleChatDisplay' onClick={() => this.props.actionSingleChat()}>
                 <div style={{ display: 'flex', flex: 2, justifyContent: 'center' }}>
                     <ProfileImage
-                        favoriteBool={this.state.Favorite}
+                        favoriteBool={this.props.favoriteBool}
                         imageProfileURL={this.state.ImgProfileURL}
                         size='60px'
                     />

@@ -44,7 +44,7 @@
     
     order:1;
     text-align: left;
-    background-image: linear-gradient(to right, var(--tre) , var(--quattro));
+    background-image: linear-gradient(45deg, var(--tre) , var(--quattro));
     color: var(--white);
     align-self: flex-start;   
 }

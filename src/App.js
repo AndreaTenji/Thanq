@@ -9,14 +9,18 @@ import Favorite from './Screen/Favorite'
 import Profile from './Screen/Profile'
 import Chat from './Screen/Chat'
 import ChangePassword from './Screen/ChangePassword'
+import ChangeProfileImg from './Screen/ChangeProfileImg'
+import ChangeBackground from './Screen/ChangeBackground'
+import ChangeTextSize from './Screen/ChangeTextSize'
 export default class App extends Component {
 
   constructor(props) {
     super(props)
     this.viewScreen = this.viewScreen.bind(this)
     this.authLogin = this.authLogin.bind(this)
+    this.logout = this.logout.bind(this)
     this.state = {
-      currentView: 'Chat',
+      currentView: 'Messages',
       login: true,
     }
   }
@@ -27,6 +31,12 @@ export default class App extends Component {
     })
   }
 
+  logout() {
+    this.setState({
+      currentView: 'Welcome',
+      login: false,
+    })
+  }
   authLogin() {
     this.setState({
       login: true,
@@ -55,6 +65,15 @@ export default class App extends Component {
     if (this.state.currentView === 'ChangePassword') {
       return <ChangePassword actionBack={() => this.viewScreen('Profile')} />
     }
+    if (this.state.currentView === 'ChangeProfileImg') {
+      return <ChangeProfileImg actionBack={() => this.viewScreen('Profile')} />
+    }
+    if (this.state.currentView === 'ChangeBackground') {
+      return <ChangeBackground actionBack={() => this.viewScreen('Profile')} />
+    }
+    if (this.state.currentView === 'ChangeTextSize') {
+      return <ChangeTextSize actionBack={() => this.viewScreen('Profile')} />
+    }
     //CHAT
     if (this.state.currentView === 'Chat') {
       return <Chat actionBack={(x) => this.viewScreen(x)} />
@@ -71,10 +90,10 @@ export default class App extends Component {
           />
         </div>
 
-        <div style={{ backgroundColor: '#D3ABF0', paddingTop: '120px' }}>
-          {this.state.currentView === 'Messages' && <Messages />}
-          {this.state.currentView === 'Favorite' && <Favorite />}
-          {this.state.currentView === 'Profile' && <Profile actionSetting={() => this.viewScreen('ChangePassword')} />}
+        <div style={{ backgroundColor: '#C39BE1', paddingTop: '120px' }}>
+          {this.state.currentView === 'Messages' && <Messages actionSingleChat={(x) => this.viewScreen(x)} />}
+          {this.state.currentView === 'Favorite' && <Favorite actionSingleChat={(x) => this.viewScreen(x)} />}
+          {this.state.currentView === 'Profile' && <Profile actionSetting={(x) => this.viewScreen(x)} actionLogout={this.logout} />}
         </div>
       </div>
 

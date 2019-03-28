@@ -23,15 +23,21 @@ export default class Messages extends React.Component {
             <div>
 
                 <div>
-                    <SingleChat actionSingleChat={() => this.viewChat(0)} />
-                    <SingleChat actionSingleChat={() => this.viewChat(1)} />
-                    <SingleChat actionSingleChat={() => this.viewChat(2)} />
-                    <SingleChat actionSingleChat={() => this.viewChat(3)} />
-                    <SingleChat actionSingleChat={() => this.viewChat(4)} />
-                    <SingleChat actionSingleChat={() => this.viewChat(5)} />
-                    <SingleChat actionSingleChat={() => this.viewChat(6)} />
+                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
+                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
+                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
+                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
+                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
+                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
+                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
+                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
+                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
+                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
+                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
+                    <SingleChat favoriteBool={false} actionSingleChat={() => this.props.actionSingleChat('Chat')} />
+
                 </div>
-                }
+
 
             </div>
 

@@ -5,7 +5,7 @@ import Input from './../Atom/Input'
 
 
 
-export default class ChangePassword extends React.Component {
+export default class ChangeBackground extends React.Component {
 
     render() {
 
@@ -26,7 +26,7 @@ export default class ChangePassword extends React.Component {
 
 
                 <div style={{ paddingTop: '3%', height: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <TextSettings Text={'Change Password'} />
+                    <TextSettings Text={'Change Background'} />
 
                     <Input type={'password'} placeholder={'CurrentPassword'} />
                     <Input type={'password'} placeholder={'New Password'} />
