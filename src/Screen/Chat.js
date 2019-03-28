@@ -33,7 +33,7 @@ export default class Chat extends React.Component {
                 <div style={{ height: ' 100vh', backgroundColor: 'white' }}>
                     <div style={{ position: 'fixed', width: '100vw' }}>
                         <ChatHeader
-                            actionBack={(x) => this.props.actionBack(x)}
+                            actionBack={this.props.actionBack}
                             name={this.state.name}
                             surname={this.state.surname}
                             jobRole={this.state.jobRole}

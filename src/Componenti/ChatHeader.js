@@ -12,7 +12,7 @@ export default class ChatHeader extends React.Component {
             <div className='chatHeader'>
                 <div
                     style={{ flex: 1 }}
-                    onClick={() => this.props.actionBack('Messages')}>
+                    onClick={() => this.props.actionBack('LandingPage')}>
                     <IconBackWhite />
                 </div>
 

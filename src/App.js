@@ -87,7 +87,7 @@ export default class App extends Component {
       'ChangeBackground': () => <ChangeBackground actionBack={() => this.viewScreen('Profile')} />,
       'ChangeProfileImg': () => <ChangeProfileImg actionBack={() => this.viewScreen('Profile')} />,
       'ChangeTextSize': () => <ChangeTextSize actionBack={() => this.viewScreen('Profile')} />,
-      'Chat': () => <Chat actionBack={(x) => this.viewScreen(x)} />,
+      'Chat': () => <Chat actionBack={this.viewScreen} />,
       'LandingPage': () => <LandingPage messages={this.state.messages} viewScreen={this.viewScreen} currentView={this.state.currentView} />,
     }
 
