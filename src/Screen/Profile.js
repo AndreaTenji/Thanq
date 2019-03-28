@@ -11,7 +11,7 @@ export default class Profile extends React.Component {
         super(props)
         this.state = {
             Name: 'Roberto',
-            Surname: 'Manchi',
+            Surname: 'Greco',
             Job: 'Social Media',
             ImageProfileURL: 'Roberto',
         }
