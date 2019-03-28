@@ -13,7 +13,7 @@ export default class MenuTab extends React.Component {
 
             <div className='menuTabDisplay'>
 
-                <div onClick={this.props.actionMessage} className='oneTab'>
+                <div onClick={() => this.props.actionTab('Messages')} className='oneTab'>
 
                     {(currentView === 'Messages') ? <p> Messages </p> : <img
                         width='40px'
@@ -23,7 +23,7 @@ export default class MenuTab extends React.Component {
 
                 </div>
 
-                <div onClick={this.props.actionFavorite} className='oneTab'>
+                <div onClick={() => this.props.actionTab('Favorite')} className='oneTab'>
 
                     {(currentView === 'Favorite') ? <p> Favorite </p> : <img
                         width='40px'
@@ -33,7 +33,7 @@ export default class MenuTab extends React.Component {
 
                 </div>
 
-                <div onClick={this.props.actionProfile} className='oneTab'>
+                <div onClick={() => this.props.actionTab('Profile')} className='oneTab'>
 
                     {(currentView === 'Profile') ? <p> Profile </p> : <img
                         width='40px'
