@@ -19,6 +19,39 @@ export default class App extends Component {
     this.state = {
       currentView: 'LandingPage',
       login: true,
+      messages: [
+        {
+          Name: "Nara",
+          Surname: "Stabo",
+          Job: "Sales",
+          LastMessage: "Ahooooo"
+        },
+        {
+          Name: "Abdula",
+          Surname: "Iuguraia",
+          Job: "Sales",
+          LastMessage: "Ce credi?"
+        },
+        {
+          Name: "Mozzo",
+          Surname: "Zozzo",
+          Job: "Sales",
+          LastMessage: "No vabbeeeee"
+        },
+        {
+          Name: "Peter",
+          Surname: "Petrelli",
+          Job: "Sales",
+          LastMessage: "Oh hai visto quella? Je 'scivano le bolle de sapone daa recchie"
+        },
+        {
+          Name: "Alfonso",
+          Surname: "Pedretti",
+          Job: "Sales",
+          LastMessage: "Veramente me chiamo Arfonzo"
+        },
+      ]
+
     }
   }
 
