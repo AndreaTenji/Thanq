@@ -1,8 +1,8 @@
 import React from 'react';
 import Button from './../Atom/Button';
-import background0 from './images/background0.png'
-import background1 from './images/background1.png'
-import background2 from './images/background2.png'
+import background0 from './../Assets/images/background0.png'
+import background1 from './../Assets/images/background1.png'
+import background2 from './../Assets/images/background2.png'
 
 import './Welcome.css'
 
