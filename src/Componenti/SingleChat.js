@@ -23,7 +23,7 @@ export default class SingleChat extends React.Component {
     render() {
         const { favoriteBool } = this.props
         return (
-            <div className='singleChatDisplay' onClick={() => this.props.actionSingleChat()}>
+            <div className='singleChatDisplay'>
                 <div style={{ display: 'flex', flex: 2, justifyContent: 'center' }}>
                     <ProfileImage
                         favoriteBool={this.props.favoriteBool}
