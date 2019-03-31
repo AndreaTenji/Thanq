@@ -28,7 +28,7 @@ export default class ChatHeader extends React.Component {
                     <TextRegularWhite Text={jobRole} />
                 </div>
 
-                <div style={{ flex: 1 }}>
+                <div style={{ flex: 1 }} onClick={this.props.actionDelateChat}>
                     <IconTrash />
                 </div>
 

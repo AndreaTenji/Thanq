@@ -7,13 +7,14 @@ import { Redirect } from 'react-router-dom'
 
 
 export default class Chat extends React.Component {
+
     constructor(props) {
         super(props)
         this.state = {
             favorite: null,
+            refresh: null,
         }
     }
-
     // componentDidMount() {
     //     let numId = null
     //     const { data } = this.props
@@ -32,20 +33,19 @@ export default class Chat extends React.Component {
 
     render() {
         let numId = null
-        const { data } = this.props
 
-        for (let i = 0; i < data.contactsChat.length; i++) {
-            if (data.contactsChat[i].id == this.props.match.params.id) {
+        for (let i = 0; i < this.props.data.contactsChat.length; i++) {
+            if (this.props.data.contactsChat[i].id == this.props.match.params.id) {
                 numId = i
                 break
             }
         }
-
-        const id = data.contactsChat[numId]
-
         if (numId == null) {
             return <Redirect to='/error/' />
         }
+
+        const id = this.props.data.contactsChat[numId]
+
 
         return (
             <div>
@@ -56,7 +56,13 @@ export default class Chat extends React.Component {
                             name={id.name}
                             surname={id.surname}
                             jobRole={id.job}
-                            favorite={this.state.favorite}
+                            favorite={id.favorite}
+                            actionDelateChat={() => {
+                                console.log(id.messages)
+                                id.messages = null;
+                                console.log(id.messages)
+                                this.setState({ refresh: !this.state.refresh })
+                            }}
                             actionFavorite={() => {
                                 id.favorite = !id.favorite;
                                 this.setState({ favorite: id.favorite })
@@ -66,69 +72,23 @@ export default class Chat extends React.Component {
                     </div>
                     <div style={{ paddingLeft: '10px', paddingRight: '10px', paddingTop: '80px', paddingBottom: '100px' }}>
 
-                        {id.messages.map((el, i) =>
+                        {(id.messages) ? id.messages.map((el, i) =>
                             <SingleMessage
                                 key={i}
                                 orario={el.time}
                                 messaggio={el.text}
-                                type={el.sender == id.id} />
-                        )
+                                type={el.sender !== id.id} />
+                        ) : null
                         }
                     </div>
                 </div>
                 <div style={{ position: 'fixed', top: '90vh' }}>
-                    <ChatInput />
+                    <ChatInput
+                        renderState={() => this.setState({ refresh: !this.state.refresh })}
+                        idPersonal={this.props.data.currentUser}
+                        data={id} />
                 </div>
             </div >
         )
     }
 }
-
-// export default class Chat extends React.Component {
-
-//   
-
-//     toggleFavorite() {
-//         this.setState({
-//             favorite: !this.state.favorite
-//         })
-//     }
-
-
-//     render() {
-
-//         return (
-//             <div>
-//                 <div style={{ height: ' 100vh', backgroundColor: 'white' }}>
-//                     <div style={{ position: 'fixed', width: '100vw' }}>
-//                         <ChatHeader
-//                             name={this.props.match.params.id}
-//                             surname={this.state.surname}
-//                             jobRole={this.state.jobRole}
-//                             favorite={this.state.favorite}
-//                             actionFavorite={() => alert('prova')}
-//                             imageProfileURL={this.state.imageProfile}
-//                         />
-//                     </div>
-//                     <div style={{ paddingLeft: '10px', paddingRight: '10px', marginBottom: '80px' }}>
-//                         <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
-//                         <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
-//                         <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo, fnoasfnsfafs fsfasfsaffsafaso'} type={false} />
-//                         <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
-//                         <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
-//                         <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
-//                         <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
-//                         <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
-//                         <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
-//                         <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
-//                         <SingleMessage orario='12:02' messaggio={'Proviamo di nuovo'} type={true} />
-//                     </div>
-//                 </div>
-//                 <div style={{ position: 'fixed', top: '85vh' }}>
-//                     <ChatInput />
-//                 </div>
-//             </div >
-
-//         )
-//     }
-// }
