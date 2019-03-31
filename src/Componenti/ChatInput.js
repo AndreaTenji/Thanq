@@ -14,7 +14,7 @@ export default class ChatInput extends React.Component {
     }
     render() {
         return (
-            <div class="send-message">
+            <div className="send-message">
                 <IconAttachment />
                 {this.state.focus ?
                     <input type="text" onBlur={() => this.setState({ focus: false })} autoFocus />

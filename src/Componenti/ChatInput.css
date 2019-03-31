@@ -26,13 +26,6 @@
     text-align: center
     
  }
-
- .send-message input::placeholder{
-    font-size: h1fg;
-    color: white;
- }
-
- 
 .send-message img{
     margin: 10px;
     width: 44px;
