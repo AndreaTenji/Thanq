@@ -8,15 +8,19 @@ export default class Favorite extends React.Component {
         return (
             <div>
                 {this.props.messages.map((el, i) =>
-                    <Link to={`/chat/${el.Name}`}>
-                        <SingleChat
-                            Name={el.Name}
-                            Surname={el.Surname}
-                            Job={el.Job}
-                            LastMessage={el.LastMessage}
-                            favoriteBool={true}
-                            actionSingleChat={() => this.props.actionSingleChat('Chat')} />
-                    </Link>
+                    (el.favourite) ?
+                        <Link to={`/chat/${el.id}`}>
+
+                            <SingleChat
+                                key={i}
+                                Name={el.name}
+                                Surname={el.surname}
+                                Job={el.job}
+                                LastMessage={el.lastMessage.text}
+                                favoriteBool={el.favourite}
+                            />
+                        </Link> :
+                        null
                 )}
             </div>
 

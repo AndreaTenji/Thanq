@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import createHistory from 'history/createBrowserHistory'
+import { Router } from "react-router-dom"
+import Route from './Router'
+//
 import './App.css';
 import Login from './Screen/Login';
 import Welcome from './Screen/Welcome';
@@ -8,9 +12,9 @@ import ChangeProfileImg from './Screen/ChangeProfileImg'
 import ChangeBackground from './Screen/ChangeBackground'
 import ChangeTextSize from './Screen/ChangeTextSize'
 import LandingPage from './Screen/LandingPage';
-import { Router } from "react-router-dom"
-import createHistory from 'history/createBrowserHistory'
-import Route from './Router'
+//
+import FakeData from './FakeData'
+
 export default class App extends Component {
 
   constructor(props) {
@@ -21,6 +25,7 @@ export default class App extends Component {
     this.state = {
       currentView: 'LandingPage',
       login: true,
+      data: FakeData,
       chatList: [
         {
           Name: "Nara",
@@ -100,7 +105,8 @@ export default class App extends Component {
       <div>
         <Router history={history}>
           <Route
-            messages={this.state.chatList} />
+            data={this.state.data}
+            messages={this.state.data.contactsChat} />
         </Router>
       </div>
     )

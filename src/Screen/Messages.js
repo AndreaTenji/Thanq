@@ -19,14 +19,14 @@ export default class Messages extends React.Component {
             <div>
 
                 {this.props.messages.map((el, i) =>
-                    <Link to={`/chat/${el.Surname}`}>
+                    <Link to={`/chat/${el.id}`}>
                         <SingleChat
                             key={i}
-                            Name={el.Name}
-                            Surname={el.Surname}
-                            Job={el.Job}
-                            LastMessage={el.LastMessage}
-                            favoriteBool={false}
+                            Name={el.name}
+                            Surname={el.surname}
+                            Job={el.job}
+                            LastMessage={el.lastMessage.text}
+                            favoriteBool={el.favourite}
                         />
                     </Link>)
                 }
