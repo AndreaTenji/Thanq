@@ -1,4 +1,4 @@
-export const fakeState1 = {
+export const fakeData = {
     currentUser: "robertogreco1101",
     name: "Roberto",
     surname: "Greco",
@@ -12,7 +12,7 @@ export const fakeState1 = {
             name: "Roberta",
             surname: "Caresti",
             job: "MediaSocial Manager",
-            favourite: true,
+            favourite: false,
             lastMessage: { text: "Hi, come stai?", sender: 'robertacaresti11202', date: '13:12' },
             messageUnread: 7,
             profileImageURL: "image-katia123456",
@@ -33,15 +33,11 @@ export const fakeState1 = {
                 },
                 {
                     sender: "robertogreco1101",
-                    text: "Sure thing! 😊"
+                    text: "Sure thing"
                 },
                 {
                     sender: "robertacaresti11202",
                     text: "Btw was there a package for me in today's mail?"
-                },
-                {
-                    sender: "robertacaresti11202",
-                    text: "Yep! 😊"
                 },
                 {
                     sender: "robertacaresti11202",
@@ -55,17 +51,69 @@ export const fakeState1 = {
             surname: "Capotombolo",
             job: "MediaSocial Flavia",
             favourite: true,
-            lastMessage: { text: "Hi, come stai?", sender: 'flaviacapotombolo1520', date: '13:12' },
+            lastMessage: { text: "Hi, come stai ?", sender: 'flaviacapotombolo1520', date: '13:12' },
             messageUnread: 7,
             profileImageURL: "image-katia123456",
             messages: [
                 {
                     sender: "robertogreco1101",
-                    text: "Are you coming to the office tomorrow?"
+                    text: "Are you coming to the office tomorrow?",
+                    time: '12:34'
                 },
                 {
                     sender: "flaviacapotombolo1520",
-                    text: "Dunno man"
+                    text: "Dunno man",
+                    time: '12:39'
+                },
+                {
+                    sender: "robertogreco1101",
+                    text: "Are you coming to the office tomorrow?",
+                    time: '12:34'
+                },
+                {
+                    sender: "flaviacapotombolo1520",
+                    text: "Dunno man",
+                    time: '12:39'
+                },
+                {
+                    sender: "robertogreco1101",
+                    text: "Are you coming to the office tomorrow?",
+                    time: '12:34'
+                },
+                {
+                    sender: "flaviacapotombolo1520",
+                    text: "Dunno man",
+                    time: '12:39'
+                },
+                {
+                    sender: "robertogreco1101",
+                    text: "Are you coming to the office tomorrow?",
+                    time: '12:34'
+                },
+                {
+                    sender: "flaviacapotombolo1520",
+                    text: "Dunno man",
+                    time: '12:39'
+                },
+                {
+                    sender: "robertogreco1101",
+                    text: "Are you coming to the office tomorrow?",
+                    time: '12:34'
+                },
+                {
+                    sender: "flaviacapotombolo1520",
+                    text: "Dunno man",
+                    time: '12:39'
+                },
+                {
+                    sender: "robertogreco1101",
+                    text: "Are you coming to the office tomorrow?",
+                    time: '12:34'
+                },
+                {
+                    sender: "flaviacapotombolo1520",
+                    text: "Dunno man",
+                    time: '12:39'
                 }
             ]
         },
@@ -149,3 +197,4 @@ export const fakeState1 = {
     }
 };
 
+export default fakeData
