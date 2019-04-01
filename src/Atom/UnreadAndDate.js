@@ -7,9 +7,13 @@ export default class UnreadAndDate extends React.Component {
         return (
 
             <div className="unreadAndDateDisplay">
-                <div className="unread">
-                    {numMessages}
-                </div>
+                {/*operatore ternario per controllare se le notifiche sono vuote*/}
+                {numMessages === 0 ?
+                    <div></div>
+                    :
+                    <div className="unread">{numMessages}
+                    </div>
+                }
                 <div className="date">
                     {time}
                 </div>

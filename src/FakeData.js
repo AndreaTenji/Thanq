@@ -14,7 +14,7 @@ export const fakeData = {
             job: "MediaSocial Manager",
             favourite: true,
             lastMessage: { text: "Hi, come stai?", sender: 'robertacaresti11202', date: '11:12' },
-            messageUnread: 3,
+            messageUnread: 0,
             profileImageURL: "image-katia123456",
             messages: [
                 {
