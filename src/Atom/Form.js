@@ -4,12 +4,10 @@ import './Form.css'
 export default class Form extends React.Component {
 
     render() {
-        const { typeInput, placeholder } = this.props
+        const { typeInput, placeholder, cambia, name } = this.props
 
         return (
-            <input type={typeInput} name="name" placeholder={placeholder}></input>
-
-
+            <input name={name} onChange={cambia} type={typeInput} placeholder={placeholder}></input>
         )
     }
 }
