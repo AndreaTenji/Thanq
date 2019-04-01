@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import SingleChat from './../Componenti/SingleChat'
 
 export default class Messages extends React.Component {
@@ -13,21 +14,26 @@ export default class Messages extends React.Component {
 
     render() {
         return (
+
+
             <div>
 
-                <div>
-                    {this.props.messages.map((el, i) =>
+                {this.props.messages.map((el, i) =>
+                    <Link to={`/chat/${el.id}`}>
                         <SingleChat
-                            Name={el.Name}
-                            Surname={el.Surname}
-                            Job={el.Job}
-                            LastMessage={el.LastMessage}
-                            favoriteBool={false}
-                            actionSingleChat={() => this.props.actionSingleChat('Chat')} />)}
-                </div>
-
-
+                            key={i}
+                            Name={el.name}
+                            Surname={el.surname}
+                            Job={el.job}
+                            LastMessage={el.lastMessage.text}
+                            favoriteBool={el.favourite}
+                        />
+                    </Link>)
+                }
             </div>
+
+
+
 
         )
     }

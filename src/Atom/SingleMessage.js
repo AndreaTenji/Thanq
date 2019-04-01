@@ -7,15 +7,15 @@ export default class SingleMessage extends React.Component {
         const { messaggio, orario, type } = this.props
 
         return (
-            <div class="single-message">
-                <div class="time">
+            <div className="single-message">
+                <div className="time">
                     <p>{orario}</p>
                 </div>
                 {type ?
-                    <div class="bubble-text sent">
+                    <div className="bubble-text sent">
                         <h4>{messaggio}</h4>
                     </div> :
-                    <div class="bubble-text received">
+                    <div className="bubble-text received">
                         <h4>{messaggio}</h4>
                     </div>
                 }

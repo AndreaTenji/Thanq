@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+
 import { TextChatName, TextRegularWhite } from './../Atom/Texts'
 import { IconTrash, IconFavoriteOutline, IconFavoriteWhite, IconBackWhite } from '../Atom/Icons';
 import ProfileImage from './../Atom/ProfileImage'
@@ -10,11 +12,9 @@ export default class ChatHeader extends React.Component {
         const { name, surname, jobRole, favorite, imageProfileURL } = this.props
         return (
             <div className='chatHeader'>
-                <div
-                    style={{ flex: 1 }}
-                    onClick={() => this.props.actionBack('LandingPage')}>
+                <Link to='/messages/' style={{ flex: 1 }}>
                     <IconBackWhite />
-                </div>
+                </Link>
 
                 <div style={{ flex: 1 }}>
                     <ProfileImage
@@ -28,7 +28,7 @@ export default class ChatHeader extends React.Component {
                     <TextRegularWhite Text={jobRole} />
                 </div>
 
-                <div style={{ flex: 1 }}>
+                <div style={{ flex: 1 }} onClick={this.props.actionDelateChat}>
                     <IconTrash />
                 </div>
 

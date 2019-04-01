@@ -2,7 +2,6 @@ import React from 'react';
 import Button from './../Atom/Button';
 import Form from './../Atom/Form';
 import Checkbox from './../Atom/Checkbox';
-import fire from './../utils/firebase'
 import './Login.css'
 
 export default class Login extends React.Component {
