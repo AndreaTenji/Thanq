@@ -66,6 +66,7 @@ export default class Chat extends React.Component {
                             actionFavorite={() => {
                                 id.favorite = !id.favorite;
                                 this.setState({ favorite: id.favorite })
+                                
                             }}
                             imageProfileURL={id.profileImageURL}
                         />

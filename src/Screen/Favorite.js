@@ -8,7 +8,7 @@ export default class Favorite extends React.Component {
         return (
             <div>
                 {this.props.messages.map((el, i) =>
-                    (el.favourite) ?
+                    (el.favorite) ?
                         <Link to={`/chat/${el.id}`}>
 
                             <SingleChat
@@ -17,7 +17,7 @@ export default class Favorite extends React.Component {
                                 Surname={el.surname}
                                 Job={el.job}
                                 LastMessage={el.lastMessage.text}
-                                favoriteBool={el.favourite}
+                                favoriteBool={el.favorite}
                             />
                         </Link> :
                         null
