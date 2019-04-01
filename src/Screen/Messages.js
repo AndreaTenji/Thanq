@@ -26,7 +26,7 @@ export default class Messages extends React.Component {
                             Surname={el.surname}
                             Job={el.job}
                             LastMessage={el.lastMessage.text}
-                            favoriteBool={el.favourite}
+                            favoriteBool={el.favorite}
                         />
                     </Link>)
                 }

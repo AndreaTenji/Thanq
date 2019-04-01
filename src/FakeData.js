@@ -20,28 +20,36 @@ export const fakeData = {
                 {
                     sender: "robertogreco1101",
                     text:
-                        "Hello, have you had a chance to check out the prototype I sent you?"
+                        "Hello, have you had a chance to check out the prototype I sent you?",
+                    time: "10:30"
+
                 },
                 {
                     sender: "robertacaresti11202",
                     text:
-                        "Hey sorry, not yet! I'll do it as soon as I get to the airport! I have a fligth at 5!"
+                        "Hey sorry, not yet! I'll do it as soon as I get to the airport! I have a fligth at 5!",
+                    time: "10:31"
                 },
                 {
                     sender: "robertacaresti11202",
-                    text: "Ok great, let me know when you are done!"
+                    text: "Ok great, let me know when you are done!",
+                    time: "10:32"
                 },
                 {
                     sender: "robertogreco1101",
-                    text: "Sure thing"
+                    text: "Sure thing",
+                    time: "10:33"
                 },
                 {
                     sender: "robertacaresti11202",
-                    text: "Btw was there a package for me in today's mail?"
+                    text: "Btw was there a package for me in today's mail?",
+                    time: "10:34"
                 },
                 {
                     sender: "robertacaresti11202",
-                    text: 'okay!'
+                    text: 'okay!',
+                    time: "10:35"
+
                 }
             ]
         },
@@ -50,7 +58,7 @@ export const fakeData = {
             name: "Flavia",
             surname: "Capotombolo",
             job: "MediaSocial Flavia",
-            favourite: true,
+            favorite: true,
             lastMessage: { text: "Hi, come stai ?", sender: 'flaviacapotombolo1520', date: '13:12' },
             messageUnread: 7,
             profileImageURL: "image-katia123456",
@@ -122,27 +130,36 @@ export const fakeData = {
             name: "Andrea",
             surname: "Impicciatore",
             job: "MediaSocial Andrea",
-            favourite: false,
+            favorite: false,
             lastMessage: { text: "Hi, come stai Andrea?", sender: 'robertogreco1101', date: '13:12' },
             messageUnread: 1,
             profileImageURL: "image-katia123456",
             messages: [
                 {
                     sender: "robertogreco1101",
-                    text: "Is the presentation ready?"
+                    text: "Is the presentation ready?",
+                    time: "11:31"
                 },
                 {
                     sender: "andreaimpicciatore1250",
-                    text: "Not yet"
+                    text: "Not yet",
+                    time: "11:32"
                 },
                 {
                     sender: "andreaimpicciatore1250",
-                    text: "It will be done by tomorrow, is that ok?"
+                    text: "It will be done by tomorrow, is that ok?",
+                    time: "11:33"
                 },
                 {
                     sender: "robertogreco1101",
-                    text: "Perfect!"
-                }
+                    text: "Perfect!",
+                    time: "11:34"
+                },
+                {
+                    sender:"robertogreco1101",
+                    text: "Last message sent",
+                    time: "11:35"
+                },
             ]
         }
     ],
