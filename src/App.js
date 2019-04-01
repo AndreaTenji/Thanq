@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import createHistory from 'history/createBrowserHistory'
+import { Router } from "react-router-dom"
+import Route from './Router'
+//
 import './App.css';
 import Login from './Screen/Login';
 import Welcome from './Screen/Welcome';
@@ -8,6 +12,8 @@ import ChangeProfileImg from './Screen/ChangeProfileImg'
 import ChangeBackground from './Screen/ChangeBackground'
 import ChangeTextSize from './Screen/ChangeTextSize'
 import LandingPage from './Screen/LandingPage';
+//
+import FakeData from './FakeData'
 
 export default class App extends Component {
 
@@ -19,7 +25,8 @@ export default class App extends Component {
     this.state = {
       currentView: 'LandingPage',
       login: true,
-      messages: [
+      data: FakeData,
+      chatList: [
         {
           Name: "Nara",
           Surname: "Stabo",
@@ -92,10 +99,15 @@ export default class App extends Component {
     }
 
     const Comp = ROUTES[this.state.currentView] || ROUTES['LandingPage']
+    const history = createHistory()
 
     return (
       <div>
-        <Comp />
+        <Router history={history}>
+          <Route
+            data={this.state.data}
+            messages={this.state.data.contactsChat} />
+        </Router>
       </div>
     )
 

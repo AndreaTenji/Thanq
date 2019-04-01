@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './MenuTab.css'
 import ItemTab from './../Atom/ItemTab'
 
@@ -8,34 +9,36 @@ export default class MenuTab extends React.Component {
         const { currentView } = this.props
 
         return (
-
             <div className='menuTabDisplay'>
+                <Link className='oneTab' to='/messages'>
+                    <div>
 
-                <div onClick={() => this.props.actionTab('Messages')} className='oneTab'>
+                        {(currentView === 'Messages') ?
+                            <ItemTab tabTitle='Messages' active={true} /> :
+                            <ItemTab tabTitle='Messages' active={false} />}
 
-                    {(currentView === 'Messages') ?
-                        <ItemTab tabTitle='Messages' active={true} /> :
-                        <ItemTab tabTitle='Messages' active={false} />}
+                    </div>
+                </Link>
 
-                </div>
+                <Link className='oneTab' to='/favorite'>
+                    <div className='oneTab'>
 
-                <div onClick={() => this.props.actionTab('Favorite')} className='oneTab'>
+                        {(currentView === 'Favorite') ?
+                            <ItemTab tabTitle='Favorite' active={true} /> :
+                            <ItemTab tabTitle='Favorite' active={false} />}
 
-                    {(currentView === 'Favorite') ?
-                        <ItemTab tabTitle='Favorite' active={true} /> :
-                        <ItemTab tabTitle='Favorite' active={false} />}
+                    </div>
+                </Link>
+                <Link className='oneTab' to='/profile'>
+                    <div onClick={() => this.props.actionTab('Profile')} className='oneTab'>
 
-                </div>
+                        {(currentView === 'Profile') ?
+                            <ItemTab tabTitle='Profile' active={true} /> :
+                            <ItemTab tabTitle='Profile' active={false} />}
 
-                <div onClick={() => this.props.actionTab('Profile')} className='oneTab'>
-
-                    {(currentView === 'Profile') ?
-                        <ItemTab tabTitle='Profile' active={true} /> :
-                        <ItemTab tabTitle='Profile' active={false} />}
-
-                </div>
-
-            </div>
+                    </div>
+                </Link>
+            </div >
         )
     }
 }

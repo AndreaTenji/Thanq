@@ -20,3 +20,9 @@
     font-weight: 600;
     margin: 10px 0px 0px 15px;
 }
+.truncate {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }

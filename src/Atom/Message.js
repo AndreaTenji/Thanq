@@ -6,8 +6,8 @@ export default class Message extends React.Component {
         const { fullName, message, jobRole } = this.props
         return (
             <div className="message">
-                <h2>{fullName}</h2>
-                {jobRole ? <h3>{jobRole}</h3> : <h3>{message}</h3>}
+                <h2 className='truncate'>{fullName}</h2>
+                {jobRole ? <h3 className='truncate'>{jobRole}</h3> : <h3 className='truncate'>{message}</h3>}
             </div>
         )
     }

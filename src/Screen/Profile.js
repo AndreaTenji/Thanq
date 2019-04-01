@@ -41,10 +41,10 @@ export default class Profile extends React.Component {
                     <TextSettings Text={'Settings'} />
                     <div style={{ paddingLeft: '20px', paddingTop: '10px', paddingBottom: '10px' }}>
 
-                        <DivSetting Func={() => this.props.actionSetting('ChangePassword')} Text={'Change Password'} />
-                        <DivSetting Func={() => this.props.actionSetting('ChangeProfileImg')} Text={`Change profile's image`} />
-                        <DivSetting Func={() => this.props.actionSetting('ChangeBackground')} Text={`Change chat's background`} />
-                        <DivSetting Func={() => this.props.actionSetting('ChangeTextSize')} Text={`Change text size`} />
+                        <DivSetting Func={'changepassword'} Text={'Change Password'} />
+                        <DivSetting Func={'changeprofileimg'} Text={`Change profile's image`} />
+                        <DivSetting Func={'changebackground'} Text={`Change chat's background`} />
+                        <DivSetting Func={'changetextsize'} Text={`Change text size`} />
 
                     </div>
 
@@ -52,7 +52,7 @@ export default class Profile extends React.Component {
                 <Separator />
 
                 <div style={{ paddingTop: '10px', paddingLeft: '50px' }}>
-                    <DivSetting Func={() => alert('About')} Text={`About`} />
+                    <DivSetting Func={'about'} Text={`About`} />
                 </div>
 
 

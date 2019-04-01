@@ -37,12 +37,12 @@
 .textChatName{
     color:var(--white);
     font-weight: 600;
-    font-size:20pt;
+    font-size:18pt;
     margin: 0px;
 }
 .textRegularWhite{
     color:var(--white);
     font-weight: 400;
-    font-size:20pt;
+    font-size:16pt;
     margin: 0px;
 }
