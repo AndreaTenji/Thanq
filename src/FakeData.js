@@ -13,8 +13,8 @@ export const fakeData = {
             surname: "Caresti",
             job: "MediaSocial Manager",
             favourite: true,
-            lastMessage: { text: "Hi, come stai?", sender: 'robertacaresti11202', date: '13:12' },
-            messageUnread: 7,
+            lastMessage: { text: "Hi, come stai?", sender: 'robertacaresti11202', date: '11:12' },
+            messageUnread: 3,
             profileImageURL: "image-katia123456",
             messages: [
                 {
@@ -131,7 +131,7 @@ export const fakeData = {
             surname: "Impicciatore",
             job: "MediaSocial Andrea",
             favorite: false,
-            lastMessage: { text: "Hi, come stai Andrea?", sender: 'robertogreco1101', date: '13:12' },
+            lastMessage: { text: "Hi, come stai Andrea?", sender: 'robertogreco1101', date: '14:12' },
             messageUnread: 1,
             profileImageURL: "image-katia123456",
             messages: [
@@ -156,7 +156,7 @@ export const fakeData = {
                     time: "11:34"
                 },
                 {
-                    sender:"robertogreco1101",
+                    sender: "robertogreco1101",
                     text: "Last message sent",
                     time: "11:35"
                 },

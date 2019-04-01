@@ -17,6 +17,8 @@ export default class Favorite extends React.Component {
                                 Surname={el.surname}
                                 Job={el.job}
                                 LastMessage={el.lastMessage.text}
+                                LastMessageTime={el.lastMessage.date}
+                                messageUnread={el.messageUnread}
                                 favoriteBool={el.favorite}
                             />
                         </Link> :

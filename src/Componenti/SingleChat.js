@@ -45,8 +45,8 @@ export default class SingleChat extends React.Component {
                 </div>
                 <div style={{ flex: 1 }}>
                     <UnreadAndDate
-                        numMessages={this.state.NumbersMessage}
-                        time={this.state.LastMessageTime}
+                        numMessages={this.props.NumbersMessage}
+                        time={this.props.LastMessageTime}
                     />
                 </div>
 
