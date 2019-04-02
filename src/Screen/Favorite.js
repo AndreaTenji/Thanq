@@ -15,7 +15,7 @@ export default class Favorite extends React.Component {
                         <Link to={`/chat/${el.id}`}>
 
                             <SingleChat
-                                key={i}
+                                key={el.id}
                                 Name={el.name}
                                 Surname={el.surname}
                                 Job={el.job}

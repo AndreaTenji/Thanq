@@ -15,7 +15,7 @@ export default class Messages extends React.Component {
                 {messages.map((el, i) =>
                     <Link to={`/chat/${el.id}`}>
                         <SingleChat
-                            key={i}
+                            key={el.id}
                             Name={el.name}
                             Surname={el.surname}
                             Job={el.job}
