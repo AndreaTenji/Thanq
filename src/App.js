@@ -11,9 +11,10 @@ export default class App extends Component {
 
   constructor(props) {
     super(props)
+
     this.state = {
       currentView: 'LandingPage',
-      login: true,
+      login: false,
       data: FakeData,
     }
   }
@@ -49,6 +50,8 @@ export default class App extends Component {
       <div>
         <Router history={history}>
           <Route
+            login={this.state.login}
+            authLogin={() => this.setState({ login: true, })}
             profile={this.state.data}
             data={this.state.data}
             messages={this.state.data.contactsChat} />

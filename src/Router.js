@@ -4,6 +4,7 @@ import LandingPage from "./Screen/LandingPage";
 import Chat from "./Screen/Chat";
 import Prova from "./Prova";
 import ErrorScreen from "./Screen/Error";
+import Login from './Screen/Login'
 export default class Routes extends React.Component {
 
     render() {
@@ -19,6 +20,8 @@ export default class Routes extends React.Component {
                 <Route path="/favorite/" render={() => <LandingPage screen={'Favorite'} messages={this.props.messages} />} />
                 <Route path="/profile/" component={() => <LandingPage screen={'Profile'} profile={this.props.profile} />} />
                 <Route exact path="/error/" component={ErrorScreen} />
+                <Route path="/login/" render={this.props.login ? () => <Redirect to='/messages/' /> : () => <Login authLogin={this.props.authLogin} />} />
+
                 {/* <Route render={() => <div> 404 </div>} /> */}
             </div>
         )
