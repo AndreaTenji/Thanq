@@ -17,21 +17,24 @@ export default class Profile extends React.Component {
         }
     }
 
+
     render() {
+        const { profile } = this.props
+        console.log(profile)
         return (
             <div style={{ backgroundColor: 'white' }}>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     <div style={{ padding: '30px', flex: 2 }}>
                         <ProfileImage
-                            imageProfileURL={'image-katia123456'}
+                            imageProfileURL={profile.profileImageURL}
                             size='90px'
                         />
                     </div>
                     <div style={{ paddingLeft: '30px', flex: 6 }}>
-                        <TextSettings Text={this.state.Name + ' ' + this.state.Surname} />
+                        <TextSettings Text={profile.name + ' ' + profile.surname} />
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <IconJob size='40px' />
-                            <TextSemiBoldGrey Text={this.state.Job} />
+                            <TextSemiBoldGrey Text={profile.job} />
                         </div>
 
                     </div>

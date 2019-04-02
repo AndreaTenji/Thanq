@@ -20,6 +20,7 @@ export default class Favorite extends React.Component {
                                 LastMessageTime={el.lastMessage.date}
                                 NumbersMessage={el.messageUnread}
                                 favoriteBool={el.favorite}
+                                ImgProfileURL={el.profileImageURL}
                             />
                         </Link> :
                         null

@@ -17,7 +17,7 @@ export default class Routes extends React.Component {
                 <Route path="/chat/:id" render={(props) => <Chat {...props} data={this.props.data} />} />
                 <Route path="/messages/" render={() => <LandingPage screen={'Messages'} messages={this.props.messages} />} />
                 <Route path="/favorite/" render={() => <LandingPage screen={'Favorite'} messages={this.props.messages} />} />
-                <Route path="/profile/" component={() => <LandingPage screen={'Profile'} messages={this.props.messages} />} />
+                <Route path="/profile/" component={() => <LandingPage screen={'Profile'} profile={this.props.profile} />} />
                 <Route exact path="/error/" component={ErrorScreen} />
                 {/* <Route render={() => <div> 404 </div>} /> */}
             </div>

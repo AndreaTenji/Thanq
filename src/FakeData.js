@@ -3,7 +3,7 @@ export const fakeData = {
     name: "Roberto",
     surname: "Greco",
     job: 'Social Media',
-    profileImageURL: 'Roberto',
+    profileImageURL: 'image-roberto123456',
     currentPage: "Messages",
     activeChat: { collocutor: "null", status: "null", messages: [] },
     contactsChat: [
@@ -15,7 +15,7 @@ export const fakeData = {
             favourite: true,
             lastMessage: { text: "Hi, come stai?", sender: 'robertacaresti11202', date: '11:12' },
             messageUnread: 0,
-            profileImageURL: "image-katia123456",
+            profileImageURL: "image-roberta123456",
             messages: [
                 {
                     sender: "robertogreco1101",
@@ -61,7 +61,7 @@ export const fakeData = {
             favorite: true,
             lastMessage: { text: "Hi, come stai ?", sender: 'flaviacapotombolo1520', date: '13:12' },
             messageUnread: 7,
-            profileImageURL: "image-katia123456",
+            profileImageURL: "image-flavia123456",
             messages: [
                 {
                     sender: "robertogreco1101",
@@ -133,7 +133,7 @@ export const fakeData = {
             favorite: false,
             lastMessage: { text: "Hi, come stai Andrea?", sender: 'robertogreco1101', date: '14:12' },
             messageUnread: 1,
-            profileImageURL: "image-katia123456",
+            profileImageURL: "image-andrea123456",
             messages: [
                 {
                     sender: "robertogreco1101",
@@ -147,6 +147,117 @@ export const fakeData = {
                 },
                 {
                     sender: "andreaimpicciatore1250",
+                    text: "It will be done by tomorrow, is that ok?",
+                    time: "11:33"
+                },
+                {
+                    sender: "robertogreco1101",
+                    text: "Perfect!",
+                    time: "11:34"
+                },
+                {
+                    sender: "robertogreco1101",
+                    text: "Last message sent",
+                    time: "11:35"
+                },
+            ]
+        },
+        {
+            id: "amerigochura159482",
+            name: "Amerigo",
+            surname: "Chura",
+            job: "MediaSocial Amerigo",
+            favorite: false,
+            lastMessage: { text: "Hi, come stai Andrea?", sender: 'robertogreco1101', date: '14:12' },
+            messageUnread: 5,
+            profileImageURL: "image-amerigo123456",
+            messages: [
+                {
+                    sender: "robertogreco1101",
+                    text: "Is the presentation ready?",
+                    time: "11:31"
+                },
+                {
+                    sender: "amerigochura159482",
+                    text: "Not yet",
+                    time: "11:32"
+                },
+                {
+                    sender: "amerigochura159482",
+                    text: "It will be done by tomorrow, is that ok?",
+                    time: "11:33"
+                },
+                {
+                    sender: "robertogreco1101",
+                    text: "Perfect!",
+                    time: "11:34"
+                },
+                {
+                    sender: "robertogreco1101",
+                    text: "Last message sent",
+                    time: "11:35"
+                },
+            ]
+        },
+        {
+            id: "micheledonzelli125654",
+            name: "Michele",
+            surname: "Donzelli",
+            job: "MediaSocial Michele",
+            favorite: false,
+            lastMessage: { text: "Hi, come stai Andrea?", sender: 'robertogreco1101', date: '14:12' },
+            messageUnread: 1,
+            profileImageURL: "image-michele123456",
+            messages: [
+                {
+                    sender: "robertogreco1101",
+                    text: "Is the presentation ready?",
+                    time: "11:31"
+                },
+                {
+                    sender: "micheledonzelli125654",
+                    text: "Not yet",
+                    time: "11:32"
+                },
+                {
+                    sender: "micheledonzelli125654",
+                    text: "It will be done by tomorrow, is that ok?",
+                    time: "11:33"
+                },
+                {
+                    sender: "robertogreco1101",
+                    text: "Perfect!",
+                    time: "11:34"
+                },
+                {
+                    sender: "robertogreco1101",
+                    text: "Last message sent",
+                    time: "11:35"
+                },
+            ]
+        },
+        {
+            id: "elenarossi12348",
+            name: "Elena",
+            surname: "Rossi",
+            job: "MediaSocial Andrea",
+            favorite: true,
+            lastMessage: { text: "Hi, come stai Andrea?", sender: 'robertogreco1101', date: '14:12' },
+            messageUnread: 1,
+            profileImageURL: "image-elena123456",
+            messages: [
+                {
+                    sender: "robertogreco1101",
+                    text: "Is the presentation ready?",
+                    time: "11:31"
+                },
+                {
+                    sender: "elenarossi12348",
+                    text: "Not yet",
+                    time: "11:32"
+                },
+                {
+                    sender: "elenarossi12348",
                     text: "It will be done by tomorrow, is that ok?",
                     time: "11:33"
                 },
