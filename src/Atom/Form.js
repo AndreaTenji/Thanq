@@ -12,3 +12,19 @@ export default class Form extends React.Component {
     }
 }
 
+/*
+APPjs
+ authLogin={() => this.setState({ login: true, })}
+            login={this.state.login}
+
+Routerjs
+import Login from './Screen/Login'
+
+<Route path="/login/" render={this.props.login ? () => <Redirect to='/messages/' /> : () => <Login authLogin={this.props.authLogin} />} />
+
+
+Loginjs
+this.authLogin = this.authLogin.bind(this)
+
+ this.props.authLogin();
+            */
