@@ -1,4 +1,6 @@
 import React from 'react'
+import PropsTypes from 'prop-types'
+
 import Message from './../Atom/Message.js'
 import ProfileImage from './../Atom/ProfileImage'
 import UnreadAndDate from './../Atom/UnreadAndDate'
@@ -6,28 +8,14 @@ import './SingleChat.css'
 
 export default class SingleChat extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            Name: 'Roberta',
-            Surname: 'Caresti',
-            Job: 'MediaSocial Maneger',
-            LastMessage: 'Hi, come stai?',
-            LastMessageTime: '14:10',
-            ImgProfileURL: 'image-katia123456',
-            Favorite: true,
-            NumbersMessage: 5,
-        }
-    }
-
     render() {
-        const { favoriteBool } = this.props
+        const { favoriteBool, ImgProfileURL, Surname, Name, Job, LastMessage, NumbersMessage, LastMessageTime } = this.props
         return (
             <div className='singleChatDisplay'>
                 <div style={{ display: 'flex', flex: 2, justifyContent: 'center' }}>
                     <ProfileImage
-                        favoriteBool={this.props.favoriteBool}
-                        imageProfileURL={this.props.ImgProfileURL}
+                        favoriteBool={favoriteBool}
+                        imageProfileURL={ImgProfileURL}
                         size='60px'
                     />
                 </div>
@@ -35,22 +23,33 @@ export default class SingleChat extends React.Component {
                 <div style={{ flex: 3 }}>
                     {favoriteBool ?
                         <Message
-                            fullName={this.props.Name + ' ' + this.props.Surname}
-                            jobRole={this.props.Job}
+                            fullName={Name + ' ' + Surname}
+                            jobRole={Job}
                         />
                         : <Message
-                            fullName={this.props.Name + ' ' + this.props.Surname}
-                            message={this.props.LastMessage}
+                            fullName={Name + ' ' + Surname}
+                            message={LastMessage}
                         />}
                 </div>
                 <div style={{ flex: 1 }}>
                     <UnreadAndDate
-                        numMessages={this.props.NumbersMessage}
-                        time={this.props.LastMessageTime}
+                        numMessages={NumbersMessage}
+                        time={LastMessageTime}
                     />
                 </div>
 
             </div>
         )
     }
-} 
+}
+
+SingleChat.propsTypes = {
+    favoriteBool: PropsTypes.bool,
+    ImgProfileURL: PropsTypes.string,
+    Surname: PropsTypes.string,
+    Name: PropsTypes.string,
+    Job: PropsTypes.string,
+    LastMessage: PropsTypes.string,
+    LastMessageTime: PropsTypes.string,
+    NumbersMessage: PropsTypes.string,
+}

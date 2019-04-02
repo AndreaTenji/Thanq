@@ -1,4 +1,5 @@
 import React from 'react'
+import PropsTypes from 'prop-types'
 import './UnreadAndDate.css'
 
 export default class UnreadAndDate extends React.Component {
@@ -21,4 +22,9 @@ export default class UnreadAndDate extends React.Component {
             </div>
         )
     }
+}
+
+UnreadAndDate.propsTypes = {
+    numMessages: PropsTypes.string,
+    time: PropsTypes.func,
 }

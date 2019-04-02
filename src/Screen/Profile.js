@@ -44,10 +44,10 @@ export default class Profile extends React.Component {
                     <TextSettings Text={'Settings'} />
                     <div style={{ paddingLeft: '20px', paddingTop: '10px', paddingBottom: '10px' }}>
 
-                        <DivSetting Func={'changepassword'} Text={'Change Password'} />
-                        <DivSetting Func={'changeprofileimg'} Text={`Change profile's image`} />
-                        <DivSetting Func={'changebackground'} Text={`Change chat's background`} />
-                        <DivSetting Func={'changetextsize'} Text={`Change text size`} />
+                        <DivSetting func={'changepassword'} text={'Change Password'} />
+                        <DivSetting func={'changeprofileimg'} text={`Change profile's image`} />
+                        <DivSetting func={'changebackground'} text={`Change chat's background`} />
+                        <DivSetting func={'changetextsize'} text={`Change text size`} />
 
                     </div>
 

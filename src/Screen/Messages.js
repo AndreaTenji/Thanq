@@ -1,24 +1,18 @@
 import React from 'react';
+import PropsTypes from 'prop-types'
+
 import { Link } from 'react-router-dom'
 import SingleChat from './../Componenti/SingleChat'
 
 export default class Messages extends React.Component {
 
-
-    constructor(props) {
-        super(props)
-        this.state = {
-
-        }
-    }
-
     render() {
+        const { messages } = this.props
+
         return (
 
-
             <div>
-
-                {this.props.messages.map((el, i) =>
+                {messages.map((el, i) =>
                     <Link to={`/chat/${el.id}`}>
                         <SingleChat
                             key={i}
@@ -34,10 +28,9 @@ export default class Messages extends React.Component {
                     </Link>)
                 }
             </div>
-
-
-
-
         )
     }
+}
+Messages.propsTypes = {
+    messages: PropsTypes.object,
 }

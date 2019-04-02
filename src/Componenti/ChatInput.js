@@ -1,5 +1,7 @@
 import React from 'react';
 import './ChatInput.css'
+import PropsTypes from 'prop-types'
+
 
 import { IconAttachment, IconSend } from '../Atom/Icons';
 
@@ -12,7 +14,6 @@ export default class ChatInput extends React.Component {
             focus: false,
             valueText: '',
         };
-        this.handleChange = this.handleChange.bind(this)
     }
 
     writeMessage() {
@@ -25,6 +26,8 @@ export default class ChatInput extends React.Component {
     }
 
     render() {
+        const { idPersonal, valueText, renderState } = this.props
+
         return (
             <div className="send-message">
                 <IconAttachment />
@@ -41,11 +44,11 @@ export default class ChatInput extends React.Component {
 
                 <div onClick={() => {
                     this.props.data.messages.push({
-                        sender: this.props.idPersonal,
-                        text: this.state.valueText,
+                        sender: idPersonal,
+                        text: valueText,
                     });
                     this.setState({ valueText: '' })
-                    this.props.renderState()
+                    renderState()
                 }}
                 >
                     <IconSend />
@@ -54,4 +57,10 @@ export default class ChatInput extends React.Component {
             </div >
         )
     }
+}
+
+ChatInput.propsTypes = {
+    idPersonal: PropsTypes.string,
+    valueText: PropsTypes.string,
+    renderState: PropsTypes.func,
 }
