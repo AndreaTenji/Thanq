@@ -21,15 +21,10 @@ export default class SingleChat extends React.Component {
                 </div>
 
                 <div style={{ flex: 3 }}>
-                    {favoriteBool ?
-                        <Message
-                            fullName={Name + ' ' + Surname}
-                            jobRole={Job}
-                        />
-                        : <Message
-                            fullName={Name + ' ' + Surname}
-                            message={LastMessage}
-                        />}
+                    <Message
+                        fullName={Name + ' ' + Surname}
+                        message={(LastMessage) ? LastMessage : Job}
+                    />
                 </div>
                 <div style={{ flex: 1 }}>
                     <UnreadAndDate

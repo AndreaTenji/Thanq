@@ -13,14 +13,13 @@ export default class Favorite extends React.Component {
                 {messages.map((el, i) =>
                     (el.favorite) ?
                         <Link to={`/chat/${el.id}`}>
-
                             <SingleChat
                                 key={el.id}
                                 Name={el.name}
                                 Surname={el.surname}
                                 Job={el.job}
-                                LastMessage={el.lastMessage.text}
-                                LastMessageTime={el.lastMessage.date}
+                                LastMessage={el.messages[Object.keys(el.messages).length - 1].text}
+                                LastMessageTime={el.messages[Object.keys(el.messages).length - 1].time}
                                 NumbersMessage={el.messageUnread}
                                 favoriteBool={el.favorite}
                                 ImgProfileURL={el.profileImageURL}

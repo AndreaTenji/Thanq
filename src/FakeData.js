@@ -13,7 +13,6 @@ export const fakeData = {
             surname: "Caresti",
             job: "MediaSocial Manager",
             favourite: true,
-            lastMessage: { text: "Hi, come stai?", sender: 'robertacaresti11202', date: '11:12' },
             messageUnread: 0,
             profileImageURL: "image-roberta123456",
             messages: [
@@ -59,8 +58,7 @@ export const fakeData = {
             surname: "Capotombolo",
             job: "MediaSocial Flavia",
             favorite: true,
-            lastMessage: { text: "Hi, come stai ?", sender: 'flaviacapotombolo1520', date: '13:12' },
-            messageUnread: 7,
+            messageUnread: 5,
             profileImageURL: "image-flavia123456",
             messages: [
                 {
@@ -131,7 +129,6 @@ export const fakeData = {
             surname: "Impicciatore",
             job: "MediaSocial Andrea",
             favorite: true,
-            lastMessage: { text: "Hi, come stai Andrea?", sender: 'robertogreco1101', date: '14:12' },
             messageUnread: 1,
             profileImageURL: "image-andrea123456",
             messages: [
@@ -168,7 +165,6 @@ export const fakeData = {
             surname: "Chura",
             job: "MediaSocial Amerigo",
             favorite: false,
-            lastMessage: { text: "Hi, come stai Andrea?", sender: 'robertogreco1101', date: '14:12' },
             messageUnread: 5,
             profileImageURL: "image-amerigo123456",
             messages: [
@@ -205,7 +201,6 @@ export const fakeData = {
             surname: "Donzelli",
             job: "MediaSocial Michele",
             favorite: false,
-            lastMessage: { text: "Hi, come stai Andrea?", sender: 'robertogreco1101', date: '14:12' },
             messageUnread: 1,
             profileImageURL: "image-michele123456",
             messages: [
@@ -242,7 +237,6 @@ export const fakeData = {
             surname: "Rossi",
             job: "MediaSocial Andrea",
             favorite: true,
-            lastMessage: { text: "Hi, come stai Andrea?", sender: 'robertogreco1101', date: '14:12' },
             messageUnread: 1,
             profileImageURL: "image-elena123456",
             messages: [

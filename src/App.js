@@ -14,7 +14,7 @@ export default class App extends Component {
 
     this.state = {
       currentView: 'LandingPage',
-      login: false,
+      login: true,
       data: FakeData,
     }
   }

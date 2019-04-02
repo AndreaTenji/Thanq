@@ -22,11 +22,13 @@ export default class ChatInput extends React.Component {
         })
     }
     handleChange(event) {
-        this.setState({ valueText: event.target.value })
+        this.setState({
+            valueText: event.target.value
+        })
     }
 
     render() {
-        const { idPersonal, valueText, renderState } = this.props
+        const { idPersonal, renderState } = this.props
 
         return (
             <div className="send-message">
@@ -37,7 +39,7 @@ export default class ChatInput extends React.Component {
                         value={this.state.valueText}
                         name='textMessage'
                         onBlur={() => this.setState({ focus: false })}
-                        onChange={this.handleChange}
+                        onChange={(event) => this.handleChange(event)}
                         autoFocus />
                     :
                     <h4 onClick={() => this.writeMessage()}>Write a message</h4>}
@@ -45,7 +47,7 @@ export default class ChatInput extends React.Component {
                 <div onClick={() => {
                     this.props.data.messages.push({
                         sender: idPersonal,
-                        text: valueText,
+                        text: this.state.valueText,
                     });
                     this.setState({ valueText: '' })
                     renderState()
