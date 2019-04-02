@@ -1,5 +1,8 @@
 import React from 'react'
+
 import { Link } from 'react-router-dom'
+import PropsTypes from 'prop-types'
+
 import './MenuTab.css'
 import ItemTab from './../Atom/ItemTab'
 
@@ -41,4 +44,8 @@ export default class MenuTab extends React.Component {
             </div >
         )
     }
+}
+
+MenuTab.propsTypes = {
+    currentView: PropsTypes.string,
 }

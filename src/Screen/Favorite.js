@@ -1,13 +1,16 @@
 import React from 'react';
+import PropsTypes from 'prop-types'
+
 import { Link } from 'react-router-dom'
 import SingleChat from './../Componenti/SingleChat'
 
 
 export default class Favorite extends React.Component {
     render() {
+        const { messages } = this.props
         return (
             <div>
-                {this.props.messages.map((el, i) =>
+                {messages.map((el, i) =>
                     (el.favorite) ?
                         <Link to={`/chat/${el.id}`}>
 
@@ -26,7 +29,10 @@ export default class Favorite extends React.Component {
                         null
                 )}
             </div>
-
         )
     }
+}
+
+Favorite.propsTypes = {
+    messages: PropsTypes.object,
 }

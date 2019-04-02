@@ -1,4 +1,6 @@
 import React from 'react';
+import PropsTypes from 'prop-types'
+
 import './Message.css'
 export default class Message extends React.Component {
 
@@ -13,3 +15,9 @@ export default class Message extends React.Component {
     }
 }
 
+
+Message.propsTypes = {
+    fullName: PropsTypes.string,
+    message: PropsTypes.string,
+    jobRole: PropsTypes.string,
+}

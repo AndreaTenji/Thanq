@@ -1,5 +1,8 @@
 import React from 'react'
+import PropsTypes from 'prop-types'
+
 import { IconMessages, IconFavoritePurple, IconProfile } from './Icons'
+
 export default class ItemTab extends React.Component {
     render() {
         const { tabTitle, active } = this.props
@@ -47,4 +50,9 @@ export default class ItemTab extends React.Component {
             )
         }
     }
+}
+
+ItemTab.propsTypes = {
+    tabTitle: PropsTypes.string,
+    active: PropsTypes.bool,
 }

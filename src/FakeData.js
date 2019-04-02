@@ -130,7 +130,7 @@ export const fakeData = {
             name: "Andrea",
             surname: "Impicciatore",
             job: "MediaSocial Andrea",
-            favorite: false,
+            favorite: true,
             lastMessage: { text: "Hi, come stai Andrea?", sender: 'robertogreco1101', date: '14:12' },
             messageUnread: 1,
             profileImageURL: "image-andrea123456",

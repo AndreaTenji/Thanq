@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropsTypes from 'prop-types'
 import './Input.css'
 export default class Input extends React.Component {
 
@@ -16,3 +16,6 @@ export default class Input extends React.Component {
     }
 }
 
+Input.propsTypes = {
+    placeholder: PropsTypes.string,
+}

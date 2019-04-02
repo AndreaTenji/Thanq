@@ -1,4 +1,5 @@
 import React from 'react';
+import PropsTypes from 'prop-types'
 
 import './Form.css'
 export default class Form extends React.Component {
@@ -12,3 +13,9 @@ export default class Form extends React.Component {
     }
 }
 
+
+Form.propsTypes = {
+    typeInput: PropsTypes.string.isRequired,
+    placeholder: PropsTypes.string,
+    cambia: PropsTypes.func
+}
