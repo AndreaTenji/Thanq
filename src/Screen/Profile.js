@@ -4,9 +4,8 @@ import Separator from './../Atom/Separator'
 import DivSetting from './../Componenti/DivSetting'
 import { TextSettings, TextSemiBoldGrey } from './../Atom/Texts'
 import { IconJob } from './../Atom/Icons'
+import { Firebase } from './../utils/Firebase';
 export default class Profile extends React.Component {
-
-
     constructor(props) {
         super(props)
         this.state = {
@@ -15,6 +14,14 @@ export default class Profile extends React.Component {
             Job: 'Social Media',
             ImageProfileURL: 'Roberto',
         }
+    }
+
+    logoutFirebase(func) {
+        Firebase.auth().signOut().then(function () {
+            func()
+        }).catch(function (error) {
+            console.log(error);
+        });
     }
 
 
@@ -59,8 +66,7 @@ export default class Profile extends React.Component {
                 </div>
 
 
-                <div
-                    onClick={() => this.props.actionLogout()}
+                <div onClick={() => this.logoutFirebase(this.props.logout)}
                     style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
 
                     <TextSettings Text={'Logout'} />

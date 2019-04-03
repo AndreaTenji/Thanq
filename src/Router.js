@@ -1,7 +1,6 @@
 import React from "react"
 import { Route, Redirect } from "react-router-dom"
 import PropsTypes from 'prop-types'
-
 import LandingPage from "./Screen/LandingPage";
 import Chat from "./Screen/Chat";
 import Prova from "./Prova";
@@ -10,7 +9,7 @@ import Login from './Screen/Login'
 export default class Routes extends React.Component {
 
     render() {
-        const { login, data, messages, profile, authLogin } = this.props
+        const { login, data, messages, profile, authLogin, logout, } = this.props
 
         if (login) {
             return (
@@ -22,7 +21,7 @@ export default class Routes extends React.Component {
                     <Route path="/chat/:id" render={(props) => <Chat {...props} data={data} />} />
                     <Route path="/messages/" render={() => <LandingPage screen={'Messages'} messages={messages} />} />
                     <Route path="/favorite/" render={() => <LandingPage screen={'Favorite'} messages={messages} />} />
-                    <Route path="/profile/" component={() => <LandingPage screen={'Profile'} profile={profile} />} />
+                    <Route path="/profile/" render={() => <LandingPage screen={'Profile'} profile={profile} logout={logout} />} />
                     <Route exact path="/error/" component={ErrorScreen} />
                 </div>
             )
@@ -43,4 +42,5 @@ Routes.propsTypes = {
     messages: PropsTypes.object,
     profile: PropsTypes.object,
     authLogin: PropsTypes.func,
+    logout: PropsTypes.func,
 }

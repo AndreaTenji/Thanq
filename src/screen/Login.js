@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './../Atom/Button';
 import Form from './../Atom/Form';
 import Checkbox from './../Atom/Checkbox';
-import { app } from './../utils/Firebase';
+import { Firebase } from './../utils/Firebase';
 import './Login.css'
 
 export default class Login extends React.Component {
@@ -22,7 +22,7 @@ export default class Login extends React.Component {
     }
 
     login() {
-        app.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
+        Firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
             this.props.authLogin();
         }).catch((error) => {
             console.log(error);

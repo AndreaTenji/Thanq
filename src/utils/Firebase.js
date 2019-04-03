@@ -8,5 +8,4 @@ const config = {
     storageBucket: "thanq-c41af.appspot.com",
     messagingSenderId: "297767299087"
 };
-
-export const app = initializeApp(config);
+export const Firebase = initializeApp(config);
