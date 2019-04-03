@@ -1,4 +1,5 @@
 import React from 'react'
+import PropsTypes from 'prop-types'
 import './ProfileImage.css'
 import { IconFavoriteYellow } from './../Atom/Icons'
 
@@ -23,4 +24,10 @@ export default class ProfileImage extends React.Component {
             </div>
         )
     }
+}
+
+ProfileImage.propsTypes = {
+    favoriteBool: PropsTypes.bool,
+    imageProfileURL: PropsTypes.string,
+    size: PropsTypes.string,
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropsTypes from 'prop-types'
 import './Button.css';
 
 export default class Button extends Component {
@@ -12,3 +13,7 @@ export default class Button extends Component {
     }
 }
 
+Button.propsTypes = {
+    titoloBottone: PropsTypes.string,
+    funzione: PropsTypes.func,
+}

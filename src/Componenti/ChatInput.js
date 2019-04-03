@@ -1,5 +1,7 @@
 import React from 'react';
 import './ChatInput.css'
+import PropsTypes from 'prop-types'
+
 
 import { IconAttachment, IconSend } from '../Atom/Icons';
 
@@ -12,7 +14,6 @@ export default class ChatInput extends React.Component {
             focus: false,
             valueText: '',
         };
-        this.handleChange = this.handleChange.bind(this)
     }
 
     writeMessage() {
@@ -21,10 +22,14 @@ export default class ChatInput extends React.Component {
         })
     }
     handleChange(event) {
-        this.setState({ valueText: event.target.value })
+        this.setState({
+            valueText: event.target.value
+        })
     }
 
     render() {
+        const { idPersonal, renderState } = this.props
+
         return (
             <div className="send-message">
                 <IconAttachment />
@@ -34,18 +39,18 @@ export default class ChatInput extends React.Component {
                         value={this.state.valueText}
                         name='textMessage'
                         onBlur={() => this.setState({ focus: false })}
-                        onChange={this.handleChange}
+                        onChange={(event) => this.handleChange(event)}
                         autoFocus />
                     :
                     <h4 onClick={() => this.writeMessage()}>Write a message</h4>}
 
                 <div onClick={() => {
                     this.props.data.messages.push({
-                        sender: this.props.idPersonal,
+                        sender: idPersonal,
                         text: this.state.valueText,
                     });
                     this.setState({ valueText: '' })
-                    this.props.renderState()
+                    renderState()
                 }}
                 >
                     <IconSend />
@@ -54,4 +59,10 @@ export default class ChatInput extends React.Component {
             </div >
         )
     }
+}
+
+ChatInput.propsTypes = {
+    idPersonal: PropsTypes.string,
+    valueText: PropsTypes.string,
+    renderState: PropsTypes.func,
 }

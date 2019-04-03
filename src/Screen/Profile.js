@@ -17,21 +17,24 @@ export default class Profile extends React.Component {
         }
     }
 
+
     render() {
+        const { profile } = this.props
+        console.log(profile)
         return (
             <div style={{ backgroundColor: 'white' }}>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     <div style={{ padding: '30px', flex: 2 }}>
                         <ProfileImage
-                            imageProfileURL={'image-katia123456'}
+                            imageProfileURL={profile.profileImageURL}
                             size='90px'
                         />
                     </div>
                     <div style={{ paddingLeft: '30px', flex: 6 }}>
-                        <TextSettings Text={this.state.Name + ' ' + this.state.Surname} />
+                        <TextSettings Text={profile.name + ' ' + profile.surname} />
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <IconJob size='40px' />
-                            <TextSemiBoldGrey Text={this.state.Job} />
+                            <TextSemiBoldGrey Text={profile.job} />
                         </div>
 
                     </div>
@@ -41,10 +44,10 @@ export default class Profile extends React.Component {
                     <TextSettings Text={'Settings'} />
                     <div style={{ paddingLeft: '20px', paddingTop: '10px', paddingBottom: '10px' }}>
 
-                        <DivSetting Func={'changepassword'} Text={'Change Password'} />
-                        <DivSetting Func={'changeprofileimg'} Text={`Change profile's image`} />
-                        <DivSetting Func={'changebackground'} Text={`Change chat's background`} />
-                        <DivSetting Func={'changetextsize'} Text={`Change text size`} />
+                        <DivSetting func={'changepassword'} text={'Change Password'} />
+                        <DivSetting func={'changeprofileimg'} text={`Change profile's image`} />
+                        <DivSetting func={'changebackground'} text={`Change chat's background`} />
+                        <DivSetting func={'changetextsize'} text={`Change text size`} />
 
                     </div>
 

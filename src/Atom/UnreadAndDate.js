@@ -1,4 +1,5 @@
 import React from 'react'
+import PropsTypes from 'prop-types'
 import './UnreadAndDate.css'
 
 export default class UnreadAndDate extends React.Component {
@@ -7,9 +8,13 @@ export default class UnreadAndDate extends React.Component {
         return (
 
             <div className="unreadAndDateDisplay">
-                <div className="unread">
-                    {numMessages}
-                </div>
+                {/*operatore ternario per controllare se le notifiche sono vuote*/}
+                {numMessages === 0 ?
+                    <div></div>
+                    :
+                    <div className="unread">{numMessages}
+                    </div>
+                }
                 <div className="date">
                     {time}
                 </div>
@@ -17,4 +22,9 @@ export default class UnreadAndDate extends React.Component {
             </div>
         )
     }
+}
+
+UnreadAndDate.propsTypes = {
+    numMessages: PropsTypes.string,
+    time: PropsTypes.func,
 }

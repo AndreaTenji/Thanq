@@ -1,5 +1,7 @@
 import React from 'react';
-import { TextRegularGrey, TextSettings } from './../Atom/Texts'
+import PropsTypes from 'prop-types'
+
+import { TextSettings } from './../Atom/Texts'
 import { IconNext } from './../Atom/Icons'
 import Input from './../Atom/Input'
 
@@ -8,13 +10,14 @@ import Input from './../Atom/Input'
 export default class ChangeTextSize extends React.Component {
 
     render() {
+        const { actionBack } = this.props
 
         return (
 
             <div style={{ height: '100vh', backgroundColor: 'white' }}>
 
                 <div style={{ position: 'absolute', paddingTop: '3%', display: 'flex' }}
-                    onClick={this.props.actionBack} >
+                    onClick={actionBack} >
                     <IconNext />
 
                     {/* <TextRegularGrey Text={'Back'} /> */}
@@ -37,4 +40,7 @@ export default class ChangeTextSize extends React.Component {
 
         )
     }
+}
+ChangeTextSize.propsTypes = {
+    actionBack: PropsTypes.func,
 }

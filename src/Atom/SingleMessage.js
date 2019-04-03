@@ -1,4 +1,5 @@
 import React from 'react';
+import PropsTypes from 'prop-types'
 
 import './SingleMessage.css'
 export default class SingleMessage extends React.Component {
@@ -20,8 +21,12 @@ export default class SingleMessage extends React.Component {
                     </div>
                 }
             </div>
-
-
         )
     }
+}
+
+SingleMessage.propsTypes = {
+    messaggio: PropsTypes.string,
+    orario: PropsTypes.string,
+    type: PropsTypes.string,
 }

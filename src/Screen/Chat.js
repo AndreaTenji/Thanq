@@ -113,6 +113,55 @@ export default class Chat extends React.Component {
             </div >
         )
     }
+
+    const id = this.props.data.contactsChat[numId]
+
+
+    return (
+      <div>
+        <div style={{ height: ' 100vh', backgroundColor: 'white' }}>
+          <div style={{ position: 'fixed', width: '100vw' }}>
+            <ChatHeader
+              // name={prova}
+              name={id.name}
+              surname={id.surname}
+              jobRole={id.job}
+              favorite={id.favorite}
+              actionDelateChat={() => {
+                console.log(id.messages)
+                id.messages = null;
+                console.log(id.messages)
+                this.setState({ refresh: !this.state.refresh })
+              }}
+              actionFavorite={() => {
+                id.favorite = !id.favorite;
+                this.setState({ favorite: id.favorite })
+
+              }}
+              imageProfileURL={id.profileImageURL}
+            />
+          </div>
+          <div style={{ paddingLeft: '10px', paddingRight: '10px', paddingTop: '80px', paddingBottom: '100px' }}>
+
+            {(id.messages) ? id.messages.map((el, i) =>
+              <SingleMessage
+                key={i}
+                orario={el.time}
+                messaggio={el.text}
+                type={el.sender !== id.id} />
+            ) : null
+            }
+          </div>
+        </div>
+        <div style={{ position: 'fixed', top: '90vh' }}>
+          <ChatInput
+            renderState={() => this.setState({ refresh: !this.state.refresh })}
+            idPersonal={this.props.data.currentUser}
+            data={id} />
+        </div>
+      </div >
+    )
+  }
 }
 
 
