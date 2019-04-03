@@ -59,9 +59,7 @@ export default class Chat extends React.Component {
               jobRole={id.job}
               favorite={id.favorite}
               actionDelateChat={() => {
-                console.log(id.messages)
                 id.messages = null;
-                console.log(id.messages)
                 this.setState({ refresh: !this.state.refresh })
               }}
               actionFavorite={() => {
