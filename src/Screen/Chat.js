@@ -3,7 +3,7 @@ import ChatHeader from './../Componenti/ChatHeader'
 import SingleMessage from './../Atom/SingleMessage'
 import ChatInput from './../Componenti/ChatInput'
 import { Redirect } from 'react-router-dom'
-
+import Modal from './../Componenti/Modal'
 
 
 export default class Chat extends React.Component {
@@ -13,7 +13,12 @@ export default class Chat extends React.Component {
         this.state = {
             favorite: null,
             refresh: null,
+            isOpen: false,
         }
+    }
+
+    toggleModal = () => {
+      this.setState({isOpen: !this.state.isOpen})
     }
     // componentDidMount() {
     //     let numId = null
@@ -57,12 +62,16 @@ export default class Chat extends React.Component {
                             surname={id.surname}
                             jobRole={id.job}
                             favorite={id.favorite}
-                            actionDelateChat={() => {
-                                console.log(id.messages)
-                                id.messages = null;
-                                console.log(id.messages)
-                                this.setState({ refresh: !this.state.refresh })
-                            }}
+                            //actionDelateChat={ () => {
+                            //    console.log(id.messages)
+                            //    id.messages = null;
+                            //    console.log(id.messages)
+                            //    this.setState({ refresh: !this.state.refresh })
+                            //}}
+                            actionDelateChat={ 
+                              this.toggleModal
+                            }
+                          
                             actionFavorite={() => {
                                 id.favorite = !id.favorite;
                                 this.setState({ favorite: id.favorite })
@@ -70,7 +79,19 @@ export default class Chat extends React.Component {
                             }}
                             imageProfileURL={id.profileImageURL}
                         />
+
+                        <Modal show={this.state.isOpen}
+                          onClose={this.toggleModal}>
+                          Sìììì cancellamo tuttooooooo!!!
+                        <button onClick={() => {
+                          id.messages = null;
+                          this.setState({refresh: !this.state.refresh});
+                          console.log("DAJE AMO CANCELLATO TUTTO");
+                          this.toggleModal()
+                          }}>DAJE</button>
+                        </Modal>
                     </div>
+
                     <div style={{ paddingLeft: '10px', paddingRight: '10px', paddingTop: '80px', paddingBottom: '100px' }}>
 
                         {(id.messages) ? id.messages.map((el, i) =>
