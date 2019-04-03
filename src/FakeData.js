@@ -19,34 +19,34 @@ export const fakeData = {
                 {
                     sender: "robertogreco1101",
                     text:
-                        "Hello, have you had a chance to check out the prototype I sent you?",
+                        "Hello, how you getting on with the app?",
                     time: "10:30"
 
                 },
                 {
                     sender: "robertacaresti11202",
                     text:
-                        "Hey sorry, not yet! I'll do it as soon as I get to the airport! I have a fligth at 5!",
+                        "Hey man, not too bad, I actually managed to make it work locally",
                     time: "10:31"
                 },
                 {
                     sender: "robertacaresti11202",
-                    text: "Ok great, let me know when you are done!",
+                    text: "Not sure this is ok with you...",
                     time: "10:32"
                 },
                 {
                     sender: "robertogreco1101",
-                    text: "Sure thing",
+                    text: "Well, that's some results there!",
                     time: "10:33"
                 },
                 {
                     sender: "robertacaresti11202",
-                    text: "Btw was there a package for me in today's mail?",
+                    text: "😎",
                     time: "10:34"
                 },
                 {
                     sender: "robertacaresti11202",
-                    text: 'okay!',
+                    text: 'Thanks, much appreciated!',
                     time: "10:35"
 
                 }
@@ -63,62 +63,62 @@ export const fakeData = {
             messages: [
                 {
                     sender: "robertogreco1101",
-                    text: "Are you coming to the office tomorrow?",
+                    text: "Est-ce que je peux te demander something?",
                     time: '12:34'
                 },
                 {
                     sender: "flaviacapotombolo1520",
-                    text: "Dunno man",
+                    text: "Fire away",
                     time: '12:39'
                 },
                 {
                     sender: "robertogreco1101",
-                    text: "Are you coming to the office tomorrow?",
+                    text: "Are you in low with me?",
                     time: '12:34'
                 },
                 {
                     sender: "flaviacapotombolo1520",
-                    text: "Dunno man",
+                    text: "Might be... ❤️ 🧡 💛",
                     time: '12:39'
                 },
                 {
                     sender: "robertogreco1101",
-                    text: "Are you coming to the office tomorrow?",
+                    text: "K",
                     time: '12:34'
                 },
                 {
                     sender: "flaviacapotombolo1520",
-                    text: "Dunno man",
+                    text: "You know this is a work-related messaging app, right?",
                     time: '12:39'
                 },
                 {
                     sender: "robertogreco1101",
-                    text: "Are you coming to the office tomorrow?",
+                    text: "Yup",
                     time: '12:34'
                 },
                 {
                     sender: "flaviacapotombolo1520",
-                    text: "Dunno man",
+                    text: "I'm reporting you to HR for harassment",
                     time: '12:39'
                 },
                 {
                     sender: "robertogreco1101",
-                    text: "Are you coming to the office tomorrow?",
+                    text: "Noooooooooooooo",
                     time: '12:34'
                 },
                 {
                     sender: "flaviacapotombolo1520",
-                    text: "Dunno man",
+                    text: "Jk, lol",
                     time: '12:39'
                 },
                 {
                     sender: "robertogreco1101",
-                    text: "Are you coming to the office tomorrow?",
+                    text: "You almost had me there",
                     time: '12:34'
                 },
                 {
                     sender: "flaviacapotombolo1520",
-                    text: "Dunno man",
+                    text: "😂😂😂",
                     time: '12:39'
                 }
             ]
@@ -134,28 +134,38 @@ export const fakeData = {
             messages: [
                 {
                     sender: "robertogreco1101",
-                    text: "Is the presentation ready?",
+                    text: "Hey there",
                     time: "11:31"
                 },
                 {
                     sender: "andreaimpicciatore1250",
-                    text: "Not yet",
+                    text: "Hi",
                     time: "11:32"
                 },
                 {
                     sender: "andreaimpicciatore1250",
-                    text: "It will be done by tomorrow, is that ok?",
+                    text: "How are you?",
                     time: "11:33"
                 },
                 {
                     sender: "robertogreco1101",
-                    text: "Perfect!",
+                    text: "I'm all good thanks",
                     time: "11:34"
                 },
                 {
                     sender: "robertogreco1101",
-                    text: "Last message sent",
+                    text: "Your payslip will be in tomorrow. 20 euro for the whole month",
                     time: "11:35"
+                },
+                {
+                    sender: "andreaimpicciatore1250",
+                    text: "Thank you uncle, you can give me even less if you wish",
+                    time: "11:36"
+                },
+                {
+                    sender: "robertogreco1101",
+                    text: "👍",
+                    time: "11:37"
                 },
             ]
         },
@@ -170,27 +180,27 @@ export const fakeData = {
             messages: [
                 {
                     sender: "robertogreco1101",
-                    text: "Is the presentation ready?",
+                    text: "Let's go for a kebab then?",
                     time: "11:31"
                 },
                 {
                     sender: "amerigochura159482",
-                    text: "Not yet",
+                    text: "Nope, the one you want to go to is too far away",
                     time: "11:32"
                 },
                 {
                     sender: "amerigochura159482",
-                    text: "It will be done by tomorrow, is that ok?",
+                    text: "I'd rather go to the closest, filthiest one",
                     time: "11:33"
                 },
                 {
                     sender: "robertogreco1101",
-                    text: "Perfect!",
+                    text: "Great!",
                     time: "11:34"
                 },
                 {
                     sender: "robertogreco1101",
-                    text: "Last message sent",
+                    text: "It's a perfect day to catch a cholerae infection 🤮",
                     time: "11:35"
                 },
             ]
@@ -206,27 +216,27 @@ export const fakeData = {
             messages: [
                 {
                     sender: "robertogreco1101",
-                    text: "Is the presentation ready?",
+                    text: "So?",
                     time: "11:31"
                 },
                 {
                     sender: "micheledonzelli125654",
-                    text: "Not yet",
+                    text: "Nothing yet",
                     time: "11:32"
                 },
                 {
                     sender: "micheledonzelli125654",
-                    text: "It will be done by tomorrow, is that ok?",
+                    text: "Been busy doing nothing and putting it off",
                     time: "11:33"
                 },
                 {
                     sender: "robertogreco1101",
-                    text: "Perfect!",
+                    text: "What do I pay you for?!?!",
                     time: "11:34"
                 },
                 {
                     sender: "robertogreco1101",
-                    text: "Last message sent",
+                    text: "😤",
                     time: "11:35"
                 },
             ]
@@ -242,27 +252,27 @@ export const fakeData = {
             messages: [
                 {
                     sender: "robertogreco1101",
-                    text: "Is the presentation ready?",
+                    text: "Are we good?",
                     time: "11:31"
                 },
                 {
                     sender: "elenarossi12348",
-                    text: "Not yet",
+                    text: "Nope",
                     time: "11:32"
                 },
                 {
                     sender: "elenarossi12348",
-                    text: "It will be done by tomorrow, is that ok?",
+                    text: "And won't be anytime soon",
                     time: "11:33"
                 },
                 {
                     sender: "robertogreco1101",
-                    text: "Perfect!",
+                    text: "Doesn't matter",
                     time: "11:34"
                 },
                 {
                     sender: "robertogreco1101",
-                    text: "Last message sent",
+                    text: "I'm the coolest guy here anyway",
                     time: "11:35"
                 },
             ]
