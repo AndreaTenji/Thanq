@@ -9,32 +9,23 @@ import ErrorScreen from "./Screen/Error";
 import Login from './Screen/Login'
 export default class Routes extends React.Component {
 
+
     render() {
-        const { login, data, messages, profile, authLogin } = this.props
-
-        if (login) {
-            return (
-                <div>
-                    <Route exact path="/" render={() => <LandingPage screen={'Messages'} messages={messages} />} />
-                    <Route exact path="/chat/" render={() => <Redirect to='/messages/' />} />
-                    <Route path="/settings/" render={() => <Redirect to='/profile/' />} />
-                    <Route path="/prova/:vediamo" render={(props) => <Prova {...props} testo={'ahahah'} />} />
-                    <Route path="/chat/:id" render={(props) => <Chat {...props} data={data} />} />
-                    <Route path="/messages/" render={() => <LandingPage screen={'Messages'} messages={messages} />} />
-                    <Route path="/favorite/" render={() => <LandingPage screen={'Favorite'} messages={messages} />} />
-                    <Route path="/profile/" component={() => <LandingPage screen={'Profile'} profile={profile} />} />
-                    <Route exact path="/error/" component={ErrorScreen} />
-                </div>
-            )
-        } else {
-            return (
-                <div>
-                    <Route render={() => <Login authLogin={authLogin} />} />
-                </div>
-            )
-        }
+        const { data, messages, profile } = this.props
+        return (
+            <div>
+                <Route exact path="/" render={() => <Redirect to='/messages/' />} />
+                <Route exact path="/chat/" render={() => <Redirect to='/messages/' />} />
+                <Route path="/settings/" render={() => <Redirect to='/profile/' />} />
+                <Route path="/prova/:vediamo" render={(props) => <Prova {...props} testo={'ahahah'} />} />
+                <Route path="/chat/:id" render={(props) => <Chat {...props} data={data} />} />
+                <Route path="/messages/" render={() => <LandingPage screen={'Messages'} messages={messages} />} />
+                <Route path="/favorite/" render={() => <LandingPage screen={'Favorite'} messages={messages} />} />
+                <Route path="/profile/" component={() => <LandingPage screen={'Profile'} profile={profile} />} />
+                <Route exact path="/error/" component={ErrorScreen} />
+            </div>
+        )
     }
-
 }
 
 Routes.propsTypes = {

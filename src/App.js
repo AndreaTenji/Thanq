@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import createHistory from 'history/createBrowserHistory'
-import { Router } from "react-router-dom"
+import { BrowserRouter as Router } from "react-router-dom"
 import Route from './Router'
 //
 import './App.css';
@@ -14,7 +13,7 @@ export default class App extends Component {
 
     this.state = {
       currentView: 'LandingPage',
-      login: true,
+      login: false,
       data: FakeData,
     }
   }
@@ -45,10 +44,10 @@ export default class App extends Component {
   }
 
   render() {
-    const history = createHistory()
+
     return (
       <div>
-        <Router history={history}>
+        <Router>
           <Route
             login={this.state.login}
             authLogin={() => this.setState({ login: true, })}
@@ -58,6 +57,5 @@ export default class App extends Component {
         </Router>
       </div>
     )
-
   }
 }

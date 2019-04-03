@@ -22,7 +22,7 @@ export default class Login extends React.Component {
     }
 
     login() {
-        app.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
+        app.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then(() => {
             this.props.authLogin();
         }).catch((error) => {
             console.log(error);

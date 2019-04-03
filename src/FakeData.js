@@ -268,55 +268,7 @@ export const fakeData = {
             ]
         }
     ],
-    contactsAll: [
-        {
-            id: "alessandraderossi",
-            image: "/images/profile_alessandra.jpg",
-            name: "Alessandra De Rossi",
-            status: "away",
-            messages: []
-        },
-        {
-            id: "angelastewart",
-            image: "/images/profile_angela.png",
-            name: "Angela Stewart",
-            status: "away",
-            messages: []
-        },
-        {
-            id: "jamesmcaville",
-            image: "/images/profile_james.png",
-            name: "James McAville",
-            status: "away",
-            messages: []
-        },
-        {
-            id: "lucilledavis",
-            image: "/images/profile_lucille.png",
-            name: "Lucille Davis",
-            status: "away",
-            messages: []
-        },
-        {
-            id: "francisscott",
-            image: "/images/profile_francis.jpg",
-            name: "Francis Scott",
-            status: "away",
-            messages: []
-        },
-        {
-            id: "robertevans",
-            image: "/images/profile_robert.jpg",
-            name: "Robert Evans",
-            status: "away",
-            messages: []
-        }
-    ],
-    userInfo: {
-        email: "robertogreco1101@born2code.com",
-        nome: "Antonio Pellegrini",
-        password: "40bd001563085fc35165329ea1ff5c5ecbdbbeef"
-    }
+
 };
 
 export default fakeData
