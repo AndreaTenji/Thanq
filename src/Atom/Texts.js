@@ -29,7 +29,7 @@ export class TextChatName extends React.Component {
     render() {
         const { Text } = this.props
         return (
-            <h1 className='textChatName'>{Text}</h1>
+            <h1 className='textChatName truncate'>{Text}</h1>
         )
     }
 }
@@ -37,7 +37,7 @@ export class TextRegularWhite extends React.Component {
     render() {
         const { Text } = this.props
         return (
-            <h1 className='textRegularWhite'>{Text}</h1>
+            <h1 className='textRegularWhite truncate'>{Text}</h1>
         )
     }
 }

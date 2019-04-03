@@ -33,7 +33,6 @@ export default class Routes extends React.Component {
             )
         }
     }
-
 }
 
 Routes.propsTypes = {
