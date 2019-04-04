@@ -4,7 +4,7 @@ import Separator from './../Atom/Separator'
 import DivSetting from './../Componenti/DivSetting'
 import { TextSettings, TextSemiBoldGrey } from './../Atom/Texts'
 import { IconJob } from './../Atom/Icons'
-import { Firebase } from './../utils/Firebase';
+import { firebase } from './../utils/Firebase';
 export default class Profile extends React.Component {
     constructor(props) {
         super(props)
@@ -17,7 +17,7 @@ export default class Profile extends React.Component {
     }
 
     logoutFirebase(func) {
-        Firebase.auth().signOut().then(function () {
+        firebase.auth().signOut().then(function () {
             func()
         }).catch(function (error) {
             console.log(error);

@@ -2,7 +2,7 @@ import { initializeApp } from 'firebase'
 const firebase = require("firebase");
 
 // Initialize Firebase
-const config = {
+Firebase.initializeApp({
     apiKey: "AIzaSyBDT1WCYrEu0BmEa1ZXZ4fVtNXhrbq3ahk",
     authDomain: "thanq-c41af.firebaseapp.com",
     databaseURL: "https://thanq-c41af.firebaseio.com",
