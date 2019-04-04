@@ -1,5 +1,4 @@
-import { initializeApp } from 'firebase'
-const firebase = require("firebase");
+import Firebase from 'firebase'
 
 // Initialize Firebase
 Firebase.initializeApp({
@@ -9,8 +8,9 @@ Firebase.initializeApp({
     projectId: "thanq-c41af",
     storageBucket: "thanq-c41af.appspot.com",
     messagingSenderId: "297767299087"
-};
-export const Firebase = initializeApp(config);
+})
+
+export const firebase = Firebase;
 
 var db = firebase.firestore();
 
