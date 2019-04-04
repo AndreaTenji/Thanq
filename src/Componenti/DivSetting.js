@@ -16,7 +16,9 @@ export default class DivSetting extends React.Component {
             <Link to={`/settings/${func}`}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <TextRegularGrey Text={text} />
-                    <IconBack />
+                    <div style={{ transform: 'rotate(180deg)' }}>
+                        <IconBack />
+                    </div>
                 </div>
             </Link>
 

@@ -34,13 +34,13 @@ export default class Profile extends React.Component {
                     <div style={{ padding: '30px', flex: 2 }}>
                         <ProfileImage
                             imageProfileURL={profile.profileImageURL}
-                            size='90px'
+                            size='80px'
                         />
                     </div>
                     <div style={{ paddingLeft: '30px', flex: 6 }}>
                         <TextSettings Text={profile.name + ' ' + profile.surname} />
                         <div style={{ display: 'flex', alignItems: 'center' }}>
-                            <IconJob size='40px' />
+                            <IconJob size='30px' />
                             <TextSemiBoldGrey Text={profile.job} />
                         </div>
 

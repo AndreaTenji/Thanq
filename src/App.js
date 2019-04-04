@@ -12,24 +12,8 @@ export default class App extends Component {
     super(props)
 
     this.state = {
-      currentView: 'LandingPage',
-      login: false,
+      login: true,
       data: FakeData,
-    }
-  }
-
-  viewScreen(screen) {
-    this.setState({
-      currentView: screen
-    })
-  }
-
-
-  componentDidMount() {
-    if (!this.state.login) {
-      this.setState({
-        currentView: 'Welcome'
-      })
     }
   }
 

@@ -21,18 +21,18 @@
 .textSettings{
     color:var(--tre);
     font-weight: 700;
-    font-size:20pt;
+    font-size:16pt;
 }
 
 .textRegularGrey{
     color:var(--grey);
     font-weight: 400;
-    font-size:20pt;
+    font-size:16pt;
 }
 .textSemiBoldGrey{
     color:var(--grey);
     font-weight: 600;
-    font-size:18pt;
+    font-size:16pt;
 }
 .textChatName{
     color:var(--white);
