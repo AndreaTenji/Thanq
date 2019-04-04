@@ -18,3 +18,15 @@
     color:rgb(174, 133, 207);
     font-weight: 700;
 }
+
+
+@media(min-width: 900px) {
+
+    .menuTabDisplay{
+        background: white;
+        width: 10vw;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+}

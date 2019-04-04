@@ -54,14 +54,8 @@
 /*-----------------------------------------MEDIA QUERY------------*/
 
 @media(min-width: 900px) {
-
     .header {
-        height: 90px;
+    width: 40vw;
+    height: 70px;
     }
-    .header .icons{
-        height: 90px;
-        width: 90px;
-        
-    }
-
 }
