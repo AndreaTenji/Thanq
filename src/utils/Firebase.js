@@ -14,18 +14,12 @@ export const firebase = Firebase;
 
 var db = firebase.firestore();
 
-db.collection("chats").get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data().messages[0].text}`);
-    });
-});
-
-
-// db.collection("chats").add({
-//     first: "Alan",
-//     middle: "Mathison",
-//     last: "Turing",
-//     born: 1912
+// db.collection("users").add({
+//     currentUser: "robertogreco1101",
+//     name: "Roberto",
+//     surname: "Greco",
+//     job: 'Social Media',
+//     profileImageURL: 'image-roberto123456',
 // })
 //     .then(function (docRef) {
 //         console.log("Document written with ID: ", docRef.id);
@@ -35,9 +29,8 @@ db.collection("chats").get().then((querySnapshot) => {
 //     });
 
 
+
 export function getChats() {
-
-
     //prendere le chat con cui si sta parlando (chatlist)
 }
 export function getMessages() {
@@ -49,9 +42,16 @@ export function postMessages() {
 export function setMessages() {
     //archiviare un singolo messaggio/intera chat
 }
-export function getProfile() {
+export function getProfile(id) {
     //prendere i dati del profilo della persona autenticata
+    return db.collection("users").doc(id).get()
+        .then((doc) => {
+            console.log(doc.data().job)
+            return doc.data()
+            // var name = `${doc.id} => ${doc.data()}`;
+        });
 }
+
 export function getContacts() {
     //prendere tutti i dati dei contatti della persona autenticata (user)
 }

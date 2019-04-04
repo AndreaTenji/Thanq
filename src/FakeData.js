@@ -5,7 +5,6 @@ export const fakeData = {
     job: 'Social Media',
     profileImageURL: 'image-roberto123456',
     currentPage: "Messages",
-    activeChat: { collocutor: "null", status: "null", messages: [] },
     contactsChat: [
         {
             id: "robertacaresti11202",

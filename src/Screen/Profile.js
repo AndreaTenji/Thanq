@@ -6,15 +6,7 @@ import { TextSettings, TextSemiBoldGrey } from './../Atom/Texts'
 import { IconJob } from './../Atom/Icons'
 import { firebase } from './../utils/Firebase';
 export default class Profile extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            Name: 'Roberto',
-            Surname: 'Greco',
-            Job: 'Social Media',
-            ImageProfileURL: 'Roberto',
-        }
-    }
+
 
     logoutFirebase(func) {
         firebase.auth().signOut().then(function () {
