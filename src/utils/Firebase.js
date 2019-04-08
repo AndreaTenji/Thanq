@@ -28,12 +28,25 @@ var db = firebase.firestore();
 //         console.error("Error adding document: ", error);
 //     });
 
+//prendere le chat con cui si sta parlando (chatlist)
+
+
+export function getChats() {
     //prendere le chat con cui si sta parlando (chatlist)
-
-
-    console.log(chats)
-    console.log(chatID)
-    return { chats: chats, chatID: chatID }
+    let userId = "FvK1BIdy6AToYxfxnzuWJRwkk6y2"
+    return db.collection("chats").where("participants", "array-contains", userId).get()
+        .then(function (querySnapshot) {
+            let chats = {}
+            querySnapshot.forEach(function (doc) {
+                // doc.data() is never undefined for query doc snapshots
+                console.log(doc.id, " => ", doc.data());
+                chats[doc.id] = doc.data();
+            });
+            console.log(chats);
+        })
+        .catch(function (error) {
+            console.log("Error getting documents: ", error);
+        });
 }
 
 var Mess = getChats('FvK1BIdy6AToYxfxnzuWJRwkk6y2')
@@ -77,8 +90,6 @@ export function getProfile(id) {
             // var name = `${doc.id} => ${doc.data()}`;
         });
 }
-
-
 export function dbSearch() {
     //cercare stringa in contatti e messaggi
 }

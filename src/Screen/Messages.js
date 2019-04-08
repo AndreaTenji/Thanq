@@ -3,6 +3,7 @@ import PropsTypes from 'prop-types'
 
 import { Link } from 'react-router-dom'
 import SingleChat from './../Componenti/SingleChat'
+import { getChats } from '../utils/Firebase'
 
 export default class Messages extends React.Component {
 
