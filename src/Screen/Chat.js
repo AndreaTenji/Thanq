@@ -74,13 +74,13 @@ export default class Chat extends React.Component {
 
             <Modal show={this.state.isOpen}
               onClose={this.toggleModal}>
-              Sìììì cancellamo tuttooooooo!!!
+              Are you sure to delete?
                         <button onClick={() => {
                 id.messages = null;
                 this.setState({ refresh: !this.state.refresh });
-                console.log("DAJE AMO CANCELLATO TUTTO");
+                console.log("YES");
                 this.toggleModal()
-              }}>DAJE</button>
+              }}>Yes</button>
             </Modal>
           </div>
 
