@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Firebase from 'firebase'
 import Router from './Router'
-import { getProfile, postMessages, getMessages } from './utils/Firebase'
+import { getProfile, postMessages, getMessages, getChats, getAllUsers } from './utils/Firebase'
 //
 import './App.css';
 //
@@ -18,6 +18,7 @@ export default class App extends Component {
       data: FakeData,
       profile: null,
       chatList: 'ciao',
+      dataContacts: null,
     }
   }
 
@@ -26,16 +27,33 @@ export default class App extends Component {
     Firebase.auth().signInWithEmailAndPassword(email, password)
       .then(user => {
         this.setState({ id: user.user.uid });
+
         console.log('UID = ' + this.state.id);
+
         getProfile(this.state.id)
+
           .then(profile => {
             this.setState({ profile: profile });
             console.log('PROFILO = ' + JSON.stringify(this.state.profile))
-          });
-        getMessages('7HpeOSKR0uOZ6tMugdLX')
-          .then(chatList => {
-            this.setState({ chatList: chatList, login: true, })
           })
+
+        getChats(this.state.id)
+          .then(chatList => {
+            this.setState({ chatList: chatList })
+            console.log('CHATLIST = ' + (this.state.chatList))
+          })
+          .then(() => {
+            getAllUsers()
+              .then(allChats => {
+                this.setState({
+                  dataContacts: allChats,
+                });
+                this.setState({
+                  login: true
+                })
+              })
+          })
+
       })
   }
 

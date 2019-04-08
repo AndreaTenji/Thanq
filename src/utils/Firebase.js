@@ -31,10 +31,10 @@ var db = firebase.firestore();
 //prendere le chat con cui si sta parlando (chatlist)
 
 
-export function getChats() {
+export function getChats(userID) {
     //prendere le chat con cui si sta parlando (chatlist)
-    let userId = "FvK1BIdy6AToYxfxnzuWJRwkk6y2"
-    return db.collection("chats").where("participants", "array-contains", userId).get()
+
+    return db.collection("chats").where("participants", "array-contains", userID).get()
         .then(function (querySnapshot) {
             let chats = {}
             querySnapshot.forEach(function (doc) {
@@ -43,15 +43,10 @@ export function getChats() {
                 chats[doc.id] = doc.data();
             });
             console.log(chats);
+            return chats
         })
-        .catch(function (error) {
-            console.log("Error getting documents: ", error);
-        });
+
 }
-
-var Mess = getChats('FvK1BIdy6AToYxfxnzuWJRwkk6y2')
-console.log(Mess)
-
 
 export function getMessages(chatID) {
     //prendere i messaggi della chat della persona con cui si sta parlando (chat/messaggi)
@@ -92,4 +87,20 @@ export function getProfile(id) {
 }
 export function dbSearch() {
     //cercare stringa in contatti e messaggi
+}
+
+export function getAllUsers() {
+    return db.collection("users").get()
+        .then(function (querySnapshot) {
+            let allUsers = []
+            let allUsersByID = {}
+            querySnapshot.forEach(function (doc) {
+                allUsersByID[doc.id] = doc.data();
+                // allUsers.push(doc.data())
+                allUsers.push({ ...doc.data(), id: doc.id })
+
+            });
+            console.log(allUsersByID);
+            return allUsersByID
+        })
 }
