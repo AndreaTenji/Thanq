@@ -5,6 +5,7 @@ import Message from './../Atom/Message.js'
 import ProfileImage from './../Atom/ProfileImage'
 import UnreadAndDate from './../Atom/UnreadAndDate'
 import './SingleChat.css'
+//import {getChats} from '../utils/Firebase'
 
 export default class SingleChat extends React.Component {
 

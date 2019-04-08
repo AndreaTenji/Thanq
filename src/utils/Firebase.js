@@ -32,6 +32,20 @@ var db = firebase.firestore();
 
 export function getChats() {
     //prendere le chat con cui si sta parlando (chatlist)
+    let userId = "FvK1BIdy6AToYxfxnzuWJRwkk6y2"
+    return db.collection("chats").where("participants", "array-contains", userId).get()
+    .then(function(querySnapshot) {
+        let chats = {}
+        querySnapshot.forEach(function(doc) {
+            // doc.data() is never undefined for query doc snapshots
+            console.log(doc.id, " => ", doc.data());
+            chats[doc.id] = doc.data();
+        });
+        console.log(chats);
+    })
+    .catch(function(error) {
+        console.log("Error getting documents: ", error);
+    });
 }
 export function getMessages() {
     //prendere i messaggi della chat della persona con cui si sta parlando (chat/messaggi)
@@ -50,10 +64,6 @@ export function getProfile(id) {
             return doc.data()
             // var name = `${doc.id} => ${doc.data()}`;
         });
-}
-
-export function getContacts() {
-    //prendere tutti i dati dei contatti della persona autenticata (user)
 }
 export function dbSearch() {
     //cercare stringa in contatti e messaggi
