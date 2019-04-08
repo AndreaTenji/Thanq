@@ -19,13 +19,12 @@ export default class Profile extends React.Component {
 
     render() {
         const { profile } = this.props
-        console.log(profile)
         return (
             <div style={{ backgroundColor: 'white' }}>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     <div style={{ padding: '30px', flex: 2 }}>
                         <ProfileImage
-                            imageProfileURL={profile.profileImageURL}
+                            imageProfileURL={`${profile.profileImageURL}`}
                             size='80px'
                         />
                     </div>

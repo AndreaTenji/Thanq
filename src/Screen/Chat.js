@@ -20,22 +20,6 @@ export default class Chat extends React.Component {
   toggleModal = () => {
     this.setState({ isOpen: !this.state.isOpen })
   }
-  // componentDidMount() {
-  //     let numId = null
-  //     const { data } = this.props
-
-  //     for (let i = 0; i < data.contactsChat.length; i++) {
-  //         if (data.contactsChat[i].id == this.props.match.params.id) {
-  //             numId = i
-  //             break
-  //         }
-  //     }
-
-  //     this.setState({
-  //         favorite: this.props.data.contactsChat[numId].favourite
-  //     })
-  // }
-
   render() {
     let numId = null
 
@@ -98,8 +82,10 @@ export default class Chat extends React.Component {
         </div>
         <div style={{ position: 'fixed', top: '90vh' }}>
           <ChatInput
+            sendMessages={this.props.sendMessages}
             renderState={() => this.setState({ refresh: !this.state.refresh })}
-            idPersonal={this.props.data.currentUser}
+            chatID={id.id}
+            userID={this.props.userID}
             data={id} />
         </div>
       </div >

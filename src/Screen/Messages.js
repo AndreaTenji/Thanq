@@ -7,15 +7,20 @@ import SingleChat from './../Componenti/SingleChat'
 export default class Messages extends React.Component {
 
     render() {
-        const { messages } = this.props
+        const { chatList, messages } = this.props
 
         return (
-
             <div>
+
+                {chatList.participants.map((el) =>
+                    <div>
+                        {el}
+                    </div>)
+                }
+
                 {messages.map((el, i) =>
-                    <Link to={`/chat/${el.id}`}>
+                    <Link key={el.id} to={`/chat/${el.id}`}>
                         <SingleChat
-                            key={el.id}
                             Name={el.name}
                             Surname={el.surname}
                             Job={el.job}
