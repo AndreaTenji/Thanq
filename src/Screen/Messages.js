@@ -26,13 +26,13 @@ export default class Messages extends React.Component {
                                 // LastMessageTime={el.messages[Object.keys(el.messages).length - 1].time}
                                 // NumbersMessage={el.messageUnread}
                                 // favoriteBool={el.favorite}
+                                // favoriteBool={el.favorite}
                                 ImgProfileURL={el.profileImageURL}
+                                //{...console.log(el.favorite)}
                             />
                         </Link>
                     )
-
                 }
-
             </div>
         )
     }

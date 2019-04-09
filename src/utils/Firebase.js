@@ -89,6 +89,10 @@ export function dbSearch() {
     //cercare stringa in contatti e messaggi
 }
 
+export function appSearch() {
+    //cercare string in contatti e messaggi all'interno dello stato dell'applicazione
+}
+
 export function getAllUsers() {
     return db.collection("users").get()
         .then(function (querySnapshot) {

@@ -23,8 +23,8 @@ export default class Chat extends React.Component {
   render() {
     let numId = null
 
-    for (let i = 0; i < this.props.data.contactsChat.length; i++) {
-      if (this.props.data.contactsChat[i].id === this.props.match.params.id) {
+    for (let i = 0; i < this.props.chatList; i++) {
+      if (this.props.chatList[i].participants[i] === this.props.match.params.id) {
         numId = i
         break
       }
@@ -33,7 +33,7 @@ export default class Chat extends React.Component {
       return <Redirect to='/error/' />
     }
 
-    const id = this.props.data.contactsChat[numId]
+    const id = this.props.chatList[numId]
 
     return (
       <div>
